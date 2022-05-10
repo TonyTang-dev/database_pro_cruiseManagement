@@ -71,6 +71,12 @@ Academy Cruises Company (ACA) has decided that their manual system of booking pa
 ### 1.1 实体及属性
 ### 1.2 系统E-R图
 
+由于操作手残的问题，导致有些表的数据类型和元组内容出现错误，**后期再更改**
+
+![enter description here](./images/1652174359182.png)
+
+![enter description here](./images/1652174380133.png)
+
 ## 2.系统逻辑设计
 ### 2.1 系统关系模型
 ### 2.2 系统表结构
