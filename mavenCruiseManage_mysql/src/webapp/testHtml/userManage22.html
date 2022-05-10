@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- Bootstrap 核心 CSS文件 -->
+	<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-table.min.css" />
+	<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-theme.min.css" />
+		
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./frame/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./frame/bootstrap/js/bootstrap-table.min.js"></script>
+	<script src="./frame/bootstrap/js/bootstrap-table-locale-all.min.js"></script>
+	<script src="js/usermanager.js"></script>
+	
+	<title>用户信息</title>
+</head>
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">用户管理信息</div>
+		<div id="toolbar">
+			<button id="add" type="button" class="btn btn-primary" data-toggle="model" data-target="#myModel">
+				添加
+			</button>
+		</div>
+		<table id="usertab"
+					 data-toolbar="#toolbar"
+					 data-show-refresh="true"
+					 data-show-toggle="true"
+					 data-show-columns="true"
+					 data-id-field="id">
+		</table>
+	</div>
+</body>
+</html>

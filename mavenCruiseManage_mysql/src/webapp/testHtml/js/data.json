@@ -1,0 +1,18 @@
+[	
+	{
+		"id":"1",
+		"username":"liming",
+		"sex":"man",
+		"age":"12",
+		"phone":"123456789",
+		"address":"starnet"
+	},
+	{
+		"id":"2",
+		"username":"yanger",
+		"sex":"man",
+		"age":"12",
+		"phone":"123456789",
+		"address":"starnet"
+	}
+]

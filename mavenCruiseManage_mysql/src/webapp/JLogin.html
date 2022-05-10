@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/JLogin.css">
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/JLogin.js"></script>
+		<link rel="shortcut icon" href="img/logo.ico">
+		<title>登录</title>
+	</head>
+	<body style="background-image: url(img/loginbg3.png);">
+		<!-- 窗体对象 -->
+		<div id="pageCover" class="pageCover"></div>
+		<div id="dlgTest" class="dialog">
+			<img class="close" alt="关闭" src="img/close.png" />
+			<div class="title">窗体对象</div>
+			<div class="content">感谢为我们提出宝贵的修改意见</div>
+		</div>
+		
+		<div id="xc_logo">
+			<!-- <a href=""><img src="img/buttonbg.png" /></a> -->
+		</div>
+		
+		<div id="center-login" style="display: flex; flex-direction: row; justify-content: space-between;">
+			<div class="stage">
+				<div id="box">
+					<span class="kind b1 txt">欢迎使用音符登录</span>
+					<div class="kind b1">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+					<div class="kind b2">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+					<div class="kind b3">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+					<div class="kind b4">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+					<div class="kind b5">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+					<div class="kind b6">
+						<img src="./img/3dImg.png" alt="图片" />
+					</div>
+				</div>
+			</div>
+			<div id="login1" style="z-index: 2;display: block; background-image: url(img/loginbg3.png); background-size: cover;">
+				<div id="login1-1">
+					<span><font id="title">欢迎哟</font></span>
+					<!-- <p><a href="register.html">立即注册</a></p> -->
+				</div>
+				<div id="login1-2">
+					<label class="">帐号密码登录</label>&nbsp;&nbsp;
+					<label>手机号码登录</label>
+				</div>
+				<div class="tab-box">
+					<div class="di1" style="display: block">
+					<div class="login1-3">
+						<label>账&nbsp;&nbsp;&nbsp;户:</label>
+						<input type="text" class="account" title="请输入11位的手机号码" pattern="1[0-9]{10}" placeholder="请输入您的账号" /><br />
+						<label id="type1"></label>
+					</div>
+					<div class="login1-3">
+						<label>密&nbsp;&nbsp;&nbsp;码:</label>
+						<input type="password" id="pwd1" placeholder="请输入您的密码"/>
+						<label id="label_pwd">忘记密码？</label><br />
+						<label id="type2"></label>
+					</div>
+					<div style="width: 100%; display: flex; flex-direction: row; align-items: center;justify-content: center;margin-top: 20px;">
+						<div style="width: 50%; display: flex;flex-direction: row;justify-content: space-between;">
+							<span><input id="remPWD" checked="checked" type="checkbox">记住密码</span>
+							<span><a href="./JRegist.html">立即注册</a></span>
+						</div>
+					</div>
+					<div class="login_bottom">
+						<input type="button" id="submitBtn" onclick="clickSubmit(1)" value="登 录" />
+					</div>
+					<div class="login_mode">
+						<div class="login_mode1-1">
+							<a href="./JVerifyEmail.html">绑定邮箱</a>&nbsp;
+							<a href="userManage.html">游客登录</a>&nbsp;
+						</div>
+						<div class="login_mode1-2">
+							
+						</div>
+					</div>
+				</div>
+					<div class="di2" style="display: none;">
+						<div class="login1-3">
+							<label>手机号:</label>
+							<input type="text" class="account2" title="请输入11位的手机号码" pattern="1[0-9]{10}" placeholder="请输入手机号" required=""/><br />
+							<label id="type3"></label>
+						</div>
+						<div class="login1-3">
+							<label id="label1">验证码:</label>
+							<input id="txt_YZ" type="text" placeholder="不区分大小写" />
+							<div id="yzm">6535</div><br />
+							<label id="type4"></label>
+						</div>
+						<div style="width: 100%; display: flex; flex-direction: row; align-items: center;justify-content: center;margin-top: 20px;">
+							<div style="width: 50%; display: flex;flex-direction: row;justify-content: space-between;">
+								<!-- <span><input checked="checked" type="checkbox">记住密码</span> -->
+								<span><a href="/userManager/JRegist.html">立即注册</a></span>
+							</div>
+						</div>
+						<div class="login_bottom">
+							<input type="button" id="submitBtn" onclick="clickSubmit(2)" value="登 录" />
+						</div>
+						<div class="login_mode">
+							<div class="login_mode1-1">
+								<a>绑定邮箱</a>&nbsp;
+								<a href="/userManager/userManage2.html?name= pwd= ">游客登录</a>&nbsp;
+							</div>
+							<div class="login_mode1-2">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="button">
+			<span>
+				<a class="bottom-tip" href="./JRegist.html">用户注册</a>
+				<a class="bottom-tip">使用说明</a>
+				<a class="bottom-tip" href="./show404.html" onclick="alert('因暂无后端，故通信失败，跳转404！');">关于我们</a>
+				<a class="bottom-tip" onclick="contactUs()">联系我们</a>
+				<a class="bottom-tip" onclick="openDialog()">修改意见</a>
+			</span>
+			<p><font>Copyright©</font> 2022, <font>YINGFU-learn</font>. all rights reserved. </p>
+		</div>
+	</body>
+</html>
+<style>
+	.ons{
+		background-color: #ff5500;
+		border-radius: 5px;
+		color: white;
+		font-weight: bold;
+		padding: 5px 10px;
+	}
+
+	.stage{
+		perspective: 1600px;
+		position: relative;
+		left: 50px;
+		top: 50px;
+	}
+	#box{
+		width: 400px;
+		height: 400px;
+		transform-style: preserve-3d;
+		animation: rotate-box 20s;
+		animation-iteration-count: infinite;
+	}
+	.kind{
+		overflow: hidden;
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		/* line-height: 200px; */
+		font-size: 50px;
+		color: white;
+		position: absolute;
+		/* left: 200px;
+		top: 200px; */
+		/* border-radius: 10px; */
+	}
+	.b1{
+		background: rgba(0,255,255,0.6);
+		transform: rotateX(-90deg);
+		transform-origin: bottom;
+	}
+	.txt{
+		transform: rotateX(-45deg);
+		border-radius: 10px;
+		font-size: 20px;
+	}
+	.b2{
+		background-color: rgba(127,255,0,0.6);
+		transform: rotateX(90deg);
+		transform-origin: top;
+	}
+	.b3{
+		background-color: rgba(205,200,177,0.6);
+		transform: rotateY(90deg);
+		transform-origin: right;
+	}
+	.b4{
+		background-color: rgba(255,182,193,0.6);
+		transform: rotateY(-90deg);
+		transform-origin: left;
+	}
+	.b5{
+		background-color: rgba(159,121,238,0.6);
+		transform: translateZ(0);
+	}
+	.b6{
+		background-color: rgba(138,43,226,0.6);
+		transform: translateZ(200px);
+	}
+	.kind:hover{
+		opacity: 0.5;
+	}
+	@keyframes rotate-box{
+		0%{
+			transform: rotateX(0deg) rotateY(0deg);
+		}
+		10%{
+			transform: rotateX(0deg) rotateY(180deg);
+		}
+		20%{
+			transform: rotateX(-180deg) rotateY(180deg);
+		}
+		30%{
+			transform: rotateX(-360deg) rotateY(180deg);
+		}
+		40%{
+			transform: rotateX(-360deg) rotateY(360deg);
+		}
+		50%{
+			transform: rotateX(-180deg) rotateY(360deg);
+		}
+		60%{
+			transform: rotateX(90deg) rotateY(180deg);
+		}
+		70%{
+			transform: rotateX(0deg) rotateY(180deg);
+		}
+		80%{
+			transform: rotateX(90deg) rotateY(90deg);
+		}
+		90%{
+			transform: rotateX(90deg) rotateY(0deg);
+		}
+		100%{
+			transform: rotateX(0deg) rotateY(0deg);
+		}
+	}
+	
+	/* 窗体对象 */
+	/* html,body{
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	} */
+	.dialog{
+		position: fixed;
+		width: 300px;
+		height: 300px;
+		top: 50%;
+		left: 50%;
+		margin-top: -200px;
+		margin-left: -200px;
+		border-radius: 5px;
+		box-shadow: 2px 2px 4px #ccc;
+		background-color: #f1f1f1;
+		z-index: 30;
+		display: none;
+	}
+	.dialog .title{
+		font-size: 16px;
+		font-weight: bold;
+		color: #000000;
+		padding: 4px;
+		background-color: #ffaa7f;
+	}
+	.dialog .close{
+		width: 20px;
+		height: 20px;
+		margin: 3px;
+		float: right;
+		cursor: pointer;
+	}
+	.close:hover{
+		background-color: #9ECCF5;
+		border-radius: 40%;
+	}
+	.pageCover{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 10;
+		background-color: #666;
+		opacity: 0.5;
+		display: none;
+	}
+	.content{
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	function EventTarget(){
+		this.handlers={};
+	}
+	EventTarget.prototype={
+		constructor:EventTarget,
+		addHandler:function(type,handler){
+			if(typeof this.handlers[type]=="undefined"){
+				this.handlers[type]=new Array();
+			}
+			this.handlers[type].push(handler);
+		},
+		removeHandler:function(type,handler){
+			if(this.handlers[type] instanceof Array){
+				var handlers=this.handlers[type];
+				for(var i=0,len=handlers.length;i<len;i++){
+					if(handler[i]==handler){
+						handlers.splice(i,1);
+						break;
+					}
+				}
+			}
+		},
+		trigger:function(event){
+			if(!event.target){
+				event.target=this;
+			}
+			if(this.handlers[event.type] instanceof Array){
+				var handlers=this.handlers[event.type];
+				for(var i=0,len=handlers.length;i<len;i++){
+					handlers[i](event);
+				}
+			}
+		}
+	}
+	function extend(subType,superType){
+		var prototype=Object(superType.prototype);
+		prototype.constructor=subType;
+		subType.prototype=prototype;
+	}
+	function Dialog(id){
+		EventTarget.call(this);
+		this.id=id;
+		var that=this;
+		document.getElementById(id).children[0].onclick=function(){
+			that.close();
+		}
+	}
+	
+	extend(Dialog,EventTarget);
+	
+	Dialog.prototype.show=function(){
+		var dlg=document.getElementById(this.id);
+		dlg.style.display="block";
+		dlg=null;
+	}
+	Dialog.prototype.close=function(){
+		var dlg=document.getElementById(this.id);
+		dlg.style.display="none";
+		dlg=null;
+		this.trigger({type:'close'});
+	}
+	function openDialog(){
+		var dlg=new Dialog("dlgTest");
+		dlg.addHandler("close",function(){
+			document.getElementById("pageCover").style.display="none";
+		});
+		document.getElementById("pageCover").style.display="block";
+		dlg.show();
+	}
+</script>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-table.min.css" />
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-theme.min.css" />
+		<title>用户信息</title>
+	</head>
+	<body style="background-image: url(img/loginbg3.png);">
+		<div class="panel panel-default" style="background-image: url(img/loginbg3.png);">
+			<div style="display: flex;align-items: center;justify-content: space-between; background-image: url(img/buttonbg.png);">
+				<div class="panel-heading" style="font-size: 28px;font-weight: bold; color: #fffbf8; font-family: '宋体';">用户信息管理系统</div>
+				<div id="top1" style="margin-right: 30px;font-weight: bold; color: #ffffff;">
+					<a id="login" style="color: #FFFFFF;" href="./JLogin.html">登录</a>
+					<a style="color: #FFFFFF;">|</a>
+					<a style="color: #FFFFFF;" id="a1">联系我们</a>
+				</div>
+			</div>
+			
+			<!-- 添加页面 -->
+			<div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 300px; background-color: rgba(170, 255, 255, 0.5);">
+				<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
+					<div class="item" id="chat-panel" style="overflow-y: auto;">
+						<span>查找用户</span>
+						<div id="chat-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
+							<form id="form-query" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+								<input id="queryUserName" type="text" placeholder="输入用户名查询" />
+								<button type="button" id="queryByName" class="btn btn-success">查询</button>
+							</form>
+							<div id="queryResult" style="width:100%;"></div>
+						</div>
+					</div>
+					<div class="item" style="overflow-y: auto;">
+						<span>添加用户</span>
+						<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要填写所有信息之后点击添加即可完成添加信息</div>
+						<form id="form-add">
+							<input id="addUserName" type="text" placeholder="用户名" />
+							<input id="addUserSex" type="text" placeholder="性别" />
+							<input id="addUserAge" type="text" placeholder="年龄" />
+							<input id="addUserNum" type="text" placeholder="号码" />
+							<input id="addUserSch" type="text" placeholder="学校" />
+							<input id="addUserLimit" type="text" placeholder="权限" />
+						</form>
+						<button type="button" class="btn btn-success" onclick="addUser()">添加</button>
+					</div>
+					<div class="item">
+						<span>删除用户</span>
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>ID：</div>
+							<div id="delID"></div>
+						</div>
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>用户名：</div>
+							<div id="delName"></div>
+						</div>
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>性别：</div>
+							<div id="delSex"></div>
+						</div>	
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>年龄：</div>
+							<div id="delAge"></div>
+						</div>	
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>号码：</div>	
+							<div id="delNum"></div>
+						</div>	
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>学校：</div>	
+							<div id="delSch"></div>
+						</div>	
+						<div style="width: 100%;display: flex;flex-direction: row;background-color: #FFFFFF;border: 1px solid;">
+							<div>权限：</div>	
+							<div id="delLimit"></div>
+						</div>
+						<button type="button" id="del-btn" class="btn btn-success" onclick="delUser()">删除</button>
+					</div>
+				</div>
+			</div>
+			
+			<table id="usertab"
+				data-show-refresh="true"
+				data-show-toggle="true"
+				data-show-columns="true"
+				data-id-field="id">
+			</table>
+		</div>
+	</body>
+</html>
+<style>
+	.item{
+		width: 30%;
+		height: 100%;
+		border-radius: 10px;
+		background-image: url(img/loginbg3.png);
+		overflow: hidden;
+		display: flex;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #00007f;
+		/* justify-content: center; */
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+	.item>span{
+		font-size: 20px;
+		font-weight: bold;
+		font-family: "宋体";
+		width: 100%;
+		height: 30px;
+		background-color: #0055FF;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	.item>input{
+		font-size: 16px;
+		font-family: "宋体";
+		width: 50%;
+		outline: none;
+	}
+	.item>input:hover{
+		background-color: #dbffbe;
+	}
+	.btn{
+		margin-top: 10px;
+		outline: none;
+	}
+</style>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table-locale-all.min.js"></script>
+<script src="js/usermanager.js"></script>

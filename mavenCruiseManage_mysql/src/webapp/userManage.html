@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-table.min.css" />
+		<link rel="stylesheet" href="./frame/bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/userManager.css" />
+		<link rel="shortcut icon" href="img/logo.ico">
+		<title>用户信息</title>
+	</head>
+	<body style="background-image: url(img/loginbg3.png);">
+		<div style="display: flex;align-items: center;justify-content: space-between; background-image: url(img/buttonbg.png);">
+			<div class="panel-heading" style="font-size: 28px;font-weight: bold; color: #0000ff; font-family: '宋体';">旅游游轮管理系统</div>
+			<div id="top1" style="margin-right: 30px;font-weight: bold; color: #ffffff;">
+				<a id="login" style="color: #FFFFFF;" href="./JLogin.html">登录</a>
+				<a style="color: #FFFFFF;">|</a>
+				<a style="color: #FFFFFF;" id="a1">联系我们</a>
+			</div>
+		</div>
+		<div class="content">
+			<div id="myConsole" style="flex: 1;">
+				<div style="display: flex; flex-direction: row;height: 300px;">
+					<div style="display: inline-block; flex: 1; height:300px;overflow: hidden;">
+						<div style="display: inline-block; width: 100%;">
+							<h4 class="console-tips">用户数据总览</h4><br>
+							<div class="graph-wrap">
+								<div id="pieGraph"></div>
+								<div id="barGraph"></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default" style="width:500px; height: 300px; background-image: url(img/loginbg3.png);">
+						<div id="myCarousel" data-ride="carousel" class="carousel slide" style="width:100%; height: 100%;">
+							<!-- 轮播（Carousel）指标 -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+							</ol>   
+							<!-- 轮播（Carousel）项目 -->
+							<div class="carousel-inner" style="width:100%;height: 100%;">
+								<div class="item active" style="width:100%;height: 100%;">
+									<img src="img/fruit.jpg" alt="First slide" style="width:100%; height: 100%;">
+									<div class="carousel-caption">一蓑烟雨任平生</div>
+								</div>
+								<div class="item" style="width:100%;height: 100%;">
+									<img src="img/fruit.jpg" alt="Second slide" style="width:100%;height: 100%;">
+									<div class="carousel-caption">仰天大笑出门去</div>
+								</div>
+								<div class="item" style="width:100%;height: 100%;">
+									<img src="img/fruit.jpg" alt="Third slide" style="width:100%;height: 100%;">
+									<div class="carousel-caption">我辈岂是蓬蒿人</div>
+								</div>
+							</div>
+							<!-- 轮播（Carousel）导航 -->
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div style="width: 100%;height: 1px;background-color: #000000;"></div>
+				<div class="bottom-wrap">
+					<div class="tip-card">
+						<div class="func-item statistics">
+							<span>拥有游轮</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>3艘</span>
+							</div>
+						</div>
+						<div class="func-item statistics">
+							<span>公司收支</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>收入:20万 支出:10万</span>
+							</div>
+						</div>
+						<div class="func-item statistics">
+							<span>航程统计</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>重庆->贵阳</span>
+							</div>
+						</div>
+					</div>
+					<div class="tip-card">
+						<div class="func-item">
+							<span>数据简介</span>
+							<ul>
+								<li>用户数据包括昵称、性别、年龄和号码等</li>
+								<li>控制台显示的数据是所有用户中男女比例和用户权限统计数据</li>
+								<li>管理员可对用户数据做增删改查操作</li>
+								<li>管理员可以到后台查看数据的完整性</li>
+							</ul>
+						</div>
+						<div class="func-item">
+							<span>系统介绍</span>
+							<ul>
+								<li>系统版本1.0.0</li>
+								<li>管理员可通过右侧菜单栏选择功能操作</li>
+								<li>目前系统存在较多bug，需要进一步维护</li>
+								<li>前端基于htm+css+js+jquery+bootstrap开发</li>
+								<li>后端基于Java springMVC框架开发</li>
+							</ul>
+						</div>
+						<div class="func-item">
+							<span>注意事项</span>
+							<ul>
+								<li>当前系统不稳定，存在许多bug待修复</li>
+								<li>若出现卡顿、闪退请重启系统</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myData" style="display: none; flex: 1;">
+				<div class="panel panel-default mydataPanel">
+					<img src="img/fruit.png" style="box-shadow: 0px 0px 3px 3px #00ff00; width: 128px; height: 128px; border-radius: 50%; margin-top: 50px;" />
+					<div class="nick-wrap" style="width: 100%;display: flex;flex-direction: column;align-items: center;">
+						<span class="nick" style="font-weight: bold; margin-top: 10px;">昵称：测试一号</span>
+						<span class="signature" style="font-size: 12px;margin-top: 5px;">签名：每个人的一生都是一次远行</span>
+					</div>
+				</div>
+				<div class="data-detail-wrap">
+					<div class="func-item mydata-item">
+						<span>我的资料</span>
+						<ul>
+							<li>昵称：测试一号</li>
+							<li>号码：16262662662</li>
+							<li>性别：男</li>
+							<li>年龄：28</li>
+							<li>管理权限：管理员</li>
+						</ul>
+					</div>
+					<div class="func-item mydata-item">
+						<span>关于作者</span>
+						<ul>
+							<li>a student from CQU</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="myAdd" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
+					<!-- 添加页面 -->
+					<div class="data-detail-wrap-tips">
+						<div class="func-item mydata-item-tips">
+							<span>操作说明</span>
+							<ul>
+								<li>先在右侧的输入框中输入用户信息</li>
+								<li>确认输入无误之后点击添加按钮</li>
+								<li>如果反馈添加成功的话，代表用户信息添加成功</li>
+								<li>此时您可到用户信息列表处查看添加的用户信息</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center; flex:1; height: 300px;">
+						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
+							<div class="item" style="width: 700px; overflow-y: auto;">
+								<span>添加用户</span>
+								<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要填写所有信息之后点击添加即可完成添加信息</div>
+								<form id="form-add" style="text-align: center;">
+									<input id="addUserID" name="userID" type="text" placeholder="用户ID" />
+									<input id="addUserName" name="userName" type="text" placeholder="用户名" />
+									<input id="addUserPassword" name="password" type="text" placeholder="密码" />
+									<input id="addUserRealName" name="realName" type="text" placeholder="实名" />
+									<input id="addUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
+									<input id="addUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
+									<input id="addUserSex" name="sex" type="text" placeholder="性别" />
+									<input id="addUserDegree" name="degree" type="text" placeholder="学历" />
+									<input id="addUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
+									<input id="addUserUserSN" name="userSN" type="text" placeholder="用户编号" />
+									<input id="addUserTelephone" name="telephone" type="text" placeholder="电话" />
+									<input id="addUserMobile" name="mobile" type="text" placeholder="手机" />
+									<input id="addUserEmail" name="Email" type="text" placeholder="邮箱" />
+									<input id="addUserInDate" name="InDate" type="text" placeholder="入职日期" />
+									<input id="addUserIntro" name="Intro" type="text" placeholder="简介" />
+									<input id="addUserRole" name="Role" type="text" placeholder="角色" />
+								</form>
+								<button type="button" name="submit" class="btn btn-success" onclick="addUser()">添加</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myQuery" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
+					<!-- 查找页面 -->
+					<div class="data-detail-wrap-tips">
+						<div class="func-item mydata-item-tips">
+							<span>操作说明</span>
+							<ul>
+								<li>先在右侧的输入框中输入用户名</li>
+								<li>确认输入无误之后点击查询按钮</li>
+								<li>如果反馈添加成功的话，会在面板显示查询的信息数和信息详情</li>
+								<li>当然您也可以直接到用户列表处直接查询</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
+						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
+							<div class="item" id="chat-panel" style="width: 400px; overflow-y: auto;">
+								<span>查找用户</span>
+								<div id="chat-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
+									<form id="form-query" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+										<input id="queryUserName" type="text" placeholder="输入用户名查询" />
+										<button type="button" id="queryByName" class="btn btn-success">查询</button>
+									</form>
+									<div id="queryResult" style="width:100%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myUpdate" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
+					<div class="data-detail-wrap-tips">
+						<div class="func-item mydata-item-tips">
+							<span>操作说明</span>
+							<ul>
+								<li>先在右侧的输入框中输入用户名</li>
+								<li>确认输入无误之后点击查询按钮</li>
+								<li>如果反馈用户信息存在则会显示到输入框，默认只匹配查询到的第一个用户信息</li>
+								<li>此时您可编辑用户信息，而后修改完毕点击提交并确认即可修改用户信息</li>
+								<li>当然您可以到用户信息列表选择用户信息，点击“修改用户信息”直接到此页面修改用户信息</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
+						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
+							<div class="item" style="width: 700px; overflow-y: auto;">
+								<span>修改用户</span>
+								<form id="form-updateQuery" style="width:100%; display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+									<input id="queryUpdateUserName" type="text" placeholder="输入用户名以获取用户数据"/>
+									<button type="button" id="queryUpdateByName" class="btn btn-success">获取</button>
+								</form>
+								<div style="width: 100%; height:1px; background-color: #000000;"></div>
+
+								<div style="display:none; text-align: center;" id="updatePanel">
+									<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要确认信息输入完成之后再修改哦</div>
+									<form id="form-update">
+										<input id="updateUserID" name="userID" type="text" placeholder="用户ID" readonly/>
+										<input id="updateUserName" name="userName" type="text" placeholder="用户名" />
+										<input id="updateUserPassword" name="password" type="text" placeholder="密码" />
+										<input id="updateUserRealName" name="realName" type="text" placeholder="实名" />
+										<input id="updateUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
+										<input id="updateUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
+										<input id="updateUserSex" name="sex" type="text" placeholder="性别" />
+										<input id="updateUserDegree" name="degree" type="text" placeholder="学历" />
+										<input id="updateUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
+										<input id="updateUserUserSN" name="userSN" type="text" placeholder="用户编号" />
+										<input id="updateUserTelephone" name="telephone" type="text" placeholder="电话" />
+										<input id="updateUserMobile" name="mobile" type="text" placeholder="手机" />
+										<input id="updateUserEmail" name="Email" type="text" placeholder="邮箱" />
+										<input id="updateUserInDate" name="InDate" type="text" placeholder="入职日期" />
+										<input id="updateUserIntro" name="Intro" type="text" placeholder="简介" />
+										<input id="updateUserRole" name="Role" type="text" placeholder="角色" />
+									</form>
+									<button type="button" class="btn btn-success" onclick="updateUser()">修改</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myDelete" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
+					<!-- delete页面 -->
+					<div class="data-detail-wrap-tips">
+						<div class="func-item mydata-item-tips">
+							<span>操作说明</span>
+							<ul>
+								<li>先在右侧的输入框中输入用户名</li>
+								<li>确认输入无误之后点击删除按钮</li>
+								<li>如果反馈添加成功的话，代表用户信息删除成功</li>
+								<li>注意：此处仅支持单个用户信息的删除，且如果您输入的用户信息不存在则删除无效</li>
+								<li>您也可以直接到用户列表下选择用户信息删除--支持批量删除</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
+						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
+							<div class="item" id="chat-panel2" style="width: 400px; overflow-y: auto;">
+								<span>删除用户</span>
+								<div id="del-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
+									<form id="form-delquery" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+										<input id="deleteUserName" type="text" placeholder="输入用户名查询并删除" />
+										<button type="button" id="del-btn" class="btn btn-success" onclick="delQuery()">删除</button>
+									</form>
+									<div id="deleteResult" style="width:100%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myUserList" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:column; background-image: url(img/loginbg3.png);">
+					<div class="operatBtn-wrap">
+						<button type="button" class="btn btn-primary deleButton" onclick="changePage(3)">添加用户数据</button>
+						<button type="button" class="btn btn-primary deleButton" id="deleteByIds">删除选中数据</button>
+						<button type="button" class="btn btn-primary deleButton" onclick="changePage(5)">修改选中数据</button>
+						<button type="button" class="btn btn-warning deleButton" onclick="changePage(2)">返回主控制台</button>
+					</div>
+					<table id="usertab"
+						data-show-refresh="true"
+						data-show-toggle="true"
+						data-show-columns="true"
+						data-id-field="id"
+						data-search="true"
+						data-search-align="left"
+						style="background-color: #FFFFFF;">
+					</table>
+				</div>
+			</div>
+			<div id="mySetting" style="display: none; flex: 1;">
+				<div class="panel panel-default" style="display:flex; flex-direction:column; background-image: url(img/loginbg3.png);">
+					<div class="operatBtn-wrap">
+						<input id="batchAssessment" style="width:80%;outline:none;" name="assessment" type="text" placeholder="录入所有用户打卡天数，逗号分隔" />
+						<button id="commitAssessment" type="button" class="btn btn-warning deleButton">提交</button>
+					</div>
+					<table id="assessmentTab"
+						   data-show-refresh="true"
+						   data-show-toggle="true"
+						   data-show-columns="true"
+						   data-id-field="id"
+						   data-search="true"
+						   data-search-align="left"
+						   style="background-color: #FFFFFF;">
+					</table>
+				</div>
+			</div>
+<!--			<div id="mySetting" style="display: none; flex: 1;">-->
+<!--				<div class="panel panel-default" style="display:flex; flex-direction:column; background-image: url(img/loginbg3.png);">-->
+<!--					<div class="panel panel-default mydataPanel">-->
+<!--						<img src="img/fruit.png" style="box-shadow: 0px 0px 3px 3px #00ff00; width: 128px; height: 128px; border-radius: 50%; margin-top: 50px;" />-->
+<!--						<div class="nick-wrap" style="width: 100%;display: flex;flex-direction: column;align-items: center;">-->
+<!--							<span class="nick" style="font-weight: bold; margin-top: 10px;">昵称：测试一号</span>-->
+<!--							<span class="signature" style="font-size: 12px;margin-top: 5px;">签名：每个人的一生都是一次远行</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="data-detail-wrap">-->
+<!--						<div class="func-item mydata-item">-->
+<!--							<span>设置预览</span>-->
+<!--							<ul>-->
+<!--								<li>功能待开发</li>-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--						<div class="func-item mydata-item">-->
+<!--							<span>系统版权</span>-->
+<!--							<ul>-->
+<!--								<li>starnet</li>-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			右操作栏-->
+			<div class="left-panel">
+				<img id="head-photo" src="img/header.jpg" style="box-shadow: 0px 0px 3px 3px #ffffff; width: 64px; height: 64px; border-radius: 50%; margin-top: 50px;" />
+				<div class="nick-wrap" style="width: 80%;display: flex;flex-direction: column;align-items: flex-start;">
+					<span class="nick" style="font-weight: bold; margin-top: 10px;">昵称：测试一号</span>
+					<span class="signature" style="font-size: 12px;margin-top: 5px;">签名：每个人的一生都是一次远行</span>
+				</div>
+
+				<!-- function -->
+				<div class="function-api">
+					<ul class="list-group">
+						<li class="list-group-item" id="console" onclick="changePage(2)" style="background-color: #ff5500;">
+							<span class="glyphicon glyphicon-th-large"></span> 主控制台
+						</li>
+						<li class="list-group-item" id="data" onclick="changePage(1)">
+							<span class="glyphicon glyphicon-user"></span> 我的资料
+						</li>
+						<li class="list-group-item" id="add" onclick="changePage(3)">
+							<span class="glyphicon glyphicon-plus-sign"></span> 添加用户
+						</li>
+						<li class="list-group-item" id="query" onclick="changePage(4)">
+							<span class="glyphicon glyphicon-search"></span> 查询用户
+						</li>
+						<li class="list-group-item" id="update" onclick="changePage(5)">
+							<span class="glyphicon glyphicon-retweet"></span> 修改用户
+						</li>
+						<li class="list-group-item" id="delete" onclick="changePage(6)">
+							<span class="glyphicon glyphicon-exclamation-sign"></span> 删除用户
+						</li>
+						<li class="list-group-item" id="listUser" onclick="changePage(7)">
+							<span class="glyphicon glyphicon-list"></span> 用户列表
+						</li>
+						<li class="list-group-item" id="setting" onclick="changePage(8)">
+							<span class="glyphicon glyphicon-wrench"></span> 薪资列表
+						</li>
+<!--						<li class="list-group-item" id="setting" onclick="changePage(8)">-->
+<!--							<span class="glyphicon glyphicon-wrench"></span> 设置-->
+<!--						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="./frame/bootstrap/js/bootstrap-table-locale-all.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/usermanager.js"></script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- <div class="test" id="test">测试</div> -->
+		<div id="menu">
+			<ul>
+				<li><a href="www.mingribook.com">图书介绍</a></li>
+				<li><a href="www.mingribook.com">新书预告</a></li>
+				<li><a href="www.mingribook.com">图书销售</a></li>
+				<li><a href="www.mingribook.com">资料下载</a></li>
+				<li><a href="www.mingribook.com">好书推荐</a></li>
+				<li><a href="www.mingribook.com">技术支持</a></li>
+				<li><a href="www.mingribook.com">联系我们</a></li>
+			</ul>
+		</div>
+		<span style="width: 30px; height: 80px;" id="flag">隐藏菜单</span>
+	</body>
+</html>
+
+<script type="text/jscript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	// $(document).ready(function(){
+	// 	alert("我的第一个JQuery");
+	// });
+	// $(function(){
+	// 	alert("hhh");
+	// });
+	// var $test=$(".test");
+	// alert($test.html());
+	$(document).ready(function(){
+		$("#flag").mouseover(function(){
+			if($("#menu").is(":hidden")){
+				$("#menu").show(300);
+			}
+		} );
+		$("#menu").hover(null,function(){
+			$("#menu").hide(300);
+		} );
+	});
+</script>

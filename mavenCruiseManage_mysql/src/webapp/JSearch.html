@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="img/logo.ico">
+		<title>搜索页面</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="./menu.html">首页</a></li>
+			<li><a href="./trans3D.html">3D显示</a></li>
+			<li><a href="./calculate.html">计算利率</a></li>
+			<li><a href="./JLogin.html" target="_self">登录</a></li>
+			<li><a href="./JRegist.html" target="_self">注册</a></li>
+			<li><a href="https://www.baidu.com">设置</a></li>
+		</ul>
+		<div class="title">
+			<h2>欢迎使用音符搜索</h2>
+		</div>
+		<div class="box">
+			<input type="text" class="search1" id="searchtext">
+			<input type="button" value="搜索" class="search2" this.search()" onclick="search()">
+		</div>
+	</body>
+</html>
+<style>
+	body{
+		background-image: url(./img/loginbg3.png);
+		background-size: cover;
+	}
+	body>ul{	//直接子结点
+		list-style: none;
+		position: absolute;
+		right: 0;
+		top: 15px;
+	}
+	body>ul li{
+		float: left;
+		margin-right: 15px;
+	}
+	body>ul li a{
+		color: black;
+	}
+	.title{
+		width: 400px;
+		margin: auto;
+	}
+	.title h2{
+		float: left;
+		/* border: 1px solid red; */
+		font-size: 30px;
+		padding: 5px 15px;
+		margin-left: 30px;
+		border-radius: 50%;
+	}
+	.box{
+		width: 800px;
+		margin: 200px auto;
+	}
+	.search1{
+		width: 500px;
+		height: 40px;
+		line-height: 36px;
+		background: rgba(255,255,255,0.5);
+		border: 1px solid;
+		border-radius: 10px;
+		font-size: 16px;
+		color: blue;
+		margin-left: 80px;
+		padding-left: 5px;
+	}
+	.search2{
+		width: 104px;
+		height: 45px;
+		font-size: 16px;
+		background: #38f;
+		color: #fff;
+		line-height: 40px;
+		border: none;
+		border-radius: 5px;
+	}
+	.search2:hover{
+		background: #ff5500;
+	}
+	
+	#navigation{
+		width: 200px;
+		font-family: Arial;
+		position: absolute;
+		top: 5%;
+		left: 0px;
+	}
+	#navigation >ul >li{
+		border-bottom: 1px solid #AD9F9F;
+	}
+	#navigation >ul >li >a{
+		display: block;
+		padding: 5px 5px 5px 0.5m;
+		text-decoration: none;
+		border-left: 12px solid #711111;
+	}
+	#navigation >ul >li >a:link, #navigation >ul >li>a:visited{
+		background-color: #c11136;
+		color: #FFFFFF;
+	}
+	#navigation >ul >li >a:hover{
+		background-color: #880020;
+		color: #ff0000;
+	}
+	li{
+		list-style-type: none;
+	}
+	h1{
+		color: red;
+		background-color: #49ff01;
+		text-align: center;
+		padding: 20px;
+	}
+	img{
+		float: left;
+		border: 2px #f00 solid;
+		margin: 5px;
+	}
+	input{
+		outline: none;
+	}
+	
+	#navigation ul li ul{
+		margin: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+	#navigation ul li ul li{
+		border-top: 1px solid #ed9f9f;
+	}
+	#navigation ul li ul li a{
+		display: block;
+		padding: 3px 3px 3px 0.5em;
+		text-decoration: none;
+		border-left: 28px solid #a71f1f;
+		border-right: 1px solid #711515;
+	}
+	#navigation ul li ul li a:link, #navigation ul li ul li a:visited{
+		background-color: #e85070;
+		color: #FFFFFF;
+	}
+	#navigation ul li ul li a:hover{
+		background-color: #c2425d;
+		color: #ffff00;
+	}
+	#navigation ul li ul.myHide{
+		display: none;
+	}
+	#navigation ul li ul.myShow{
+		display: block;
+	}
+</style>
+<script type="text/javascript">
+	function search(){
+		Toast(document.getElementById("searchtext").value);
+	}
+	//提示信息 封装
+	function Toast(msg){  
+	    duration=1000;  
+	    var m = document.createElement('div');
+		if(msg==""){
+			m.innerHTML="请先输入搜索内容哦！";
+		}
+		else{
+			m.innerHTML = "您搜索了："+msg; 
+		}
+	    m.style.cssText="font-size: .32rem;color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;    top: 50%;left: 50%;width: 130px;text-align: center;";
+	    document.body.appendChild(m);  
+	    setTimeout(function() {  
+	        var d = 0.5;
+	        m.style.opacity = '0';  
+			
+			document.body.removeChild(m)
+	    }, duration);  
+	}
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="shortcut icon" href="img/logo.ico">
+		<link rel="stylesheet" type="text/css" href="css/JRegister.css" />
+	</head>
+	<body>
+		<div id="top">
+			<div id="top1">
+				<a id="login" href="javascript:window.history.back(2)">登录</a>
+				<a>|</a>
+				<a id="a1">联系我们</a>
+			</div>
+		</div>
+		<!-- 填写 -->
+		<div id="center" style="display: block;">
+			<div id="center3">
+				<span>用户注册</span>
+				<a>首次使用需要<font id="jf">成功注册</font>才能<font id="fx">正常</font>登录哦</a>
+			</div>
+			
+			<!-- 手机号文本框 -->
+			<div id="input">
+				<span class="name">手机号：</span>
+				<input type="text" id="phone" class="text" placeholder=" 请输入手机号" />
+			</div>
+			<div class="prompt" id="div1" style="display: none;">
+				<!-- <img src="./img/loginpassword.png" /> -->
+				<span id="prompt1"></span>
+			</div>
+			<!-- email文本框 -->
+			<div class="input">
+				<span class="name">昵称：</span>
+				<input type="text" id="nick" class="text" placeholder=" 请输入昵称" />
+			</div>
+			<!-- 年龄 -->
+			<div class="input">
+				<span class="name">年龄：</span>
+				<input type="text" id="age" class="text" placeholder=" 请输入年龄" />
+			</div>
+			<!-- 性别 -->
+			<div class="input">
+				<span class="name">性别：</span>
+				<input type="text" id="sex" class="text" placeholder=" 请输入邮箱(男/女)" />
+			</div>
+			<!-- 学校 -->
+			<div class="input">
+				<span class="name">学校：</span>
+				<input type="text" id="school" class="text" placeholder=" 请输入学校" />
+			</div>
+			<!-- 密码文本框 -->
+			<div class="input">
+				<span class="name">密码：</span>
+				<input type="password" id="password" class="text" placeholder="8-20位字母、数字或符号组成" />
+				<span class="grade" id="grade1">弱</span>
+				<span class="grade" id="grade2">中</span>
+				<span class="grade" id="grade3">强</span>
+			</div>
+			<div class="prompt" id="div3" style="display: none;">
+				<!-- <img src="./img/loginpassword.png" /> -->
+				<span id="prompt3"></span>
+			</div>
+			<!-- 确认密码 -->
+			<div class="input">
+				<span class="name">确认密码：</span>
+				<input type="password" id="password1" class="text" placeholder=" 再次输入密码" />
+			</div>
+			<div class="prompt" id="div4" style="display: none;">
+				<!-- <img src="./img/loginpassword.png" /> -->
+				<span id="prompt4"></span>
+			</div>
+			<label id="check">
+				<input type="checkbox" checked="checked" />
+				<a>同意<span>《音符服务协议》</span></a>
+			</label>
+			<br />
+			<span id="next_step">注册遇到问题？</span><br/>
+			<input type="button" id="btn" value="注册"/><br>
+		</div>
+		
+		<!-- 底部 -->
+		<div id="button">
+			<span>
+				<a class="bottom-tip">使用说明</a>
+				<a class="bottom-tip">关于我们</a>
+				<a class="bottom-tip" onclick="contactUs()">联系我们</a>
+				<a class="bottom-tip">修改意见</a>
+			</span>
+			<p>Copyright&copy;2022,YINGFU-learn. all rights reserved.</p>
+		</div>
+	</body>
+</html>
+<style>
+	.font11{
+		color: #acd252;
+	}
+	.span11{
+		background-color: #acd252;
+	}
+</style>
+
+<script type="text/jscript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/JRegister.js"></script>
+<script type="text/javascript">
+	
+</script>

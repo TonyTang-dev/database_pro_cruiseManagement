@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 引入登录界面 CSS -->
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!-- 登录界面JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--<script src="js/login.js"></script>-->
+
+    <link rel="shortcut icon" href="img/logo.ico">
+    <title>登录</title>
+</head>
+<body>
+	<div class="contain">
+	    <div class="logintop"></div>
+	    <div class="loginbody">
+	        <div class="logindiv" style="background-image: url('./img/logininfo3.png');">
+	            <form action="login" method="get" id="loginform" name="loginform" class="loginform">
+	                <ul>
+	                    <li>
+	                        <input style="background-image: url('./img/loginuser.png');" name="username" type="text" class="loginuser" value="" placeholder="请输入账号" maxlength="100" id="username"/>
+	                    </li>
+	                    <li>
+	                        <input style="background-image: url('./img/loginpassword.png');" name="password" type="password" class="loginpwd" value="" placeholder="请输入密码" id="password"/>
+	                    </li>
+	                    <li>
+	                        <input style="background-image: url('./img/buttonbg_disable.png');" name="btnRtSubmit" type="submit" class="loginbtn" value="登录" id="btnRtSubmit" />
+	                    </li>
+	                </ul>
+	            </form>
+	        </div>
+	    </div>
+		<div class="loginbottom">
+		</div>
+		<div id="content"></div>
+	</div>
+</body>
+</html>

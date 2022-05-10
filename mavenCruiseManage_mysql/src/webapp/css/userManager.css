@@ -1,0 +1,232 @@
+body{
+	overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: skyblue;
+}
+body::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+}
+
+.left-panel{
+	width: 200px;
+	height: calc(90vh);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: rgba(62, 62, 62, 0.8);
+}
+.function-api{
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	color: #000000;
+}
+.function-api>ul>li{
+	height: 40px;
+	margin: 0;
+	text-align: left;
+	font-size: 16px;
+	background-color: rgba(0,0,0,0);
+	padding-left: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.function-api>ul>li:hover{
+	background-color: #ff5500;
+	cursor: pointer;
+}
+
+
+.item{
+	width: 30%;
+	height: 100%;
+	border-radius: 10px;
+	background-image: url(../img/loginbg3.png);
+	overflow: hidden;
+	display: flex;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #00007f;
+	/* justify-content: center; */
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.item::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.item::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: skyblue;
+}
+.item::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
+}
+.item>span{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "宋体";
+	width: 100%;
+	height: 30px;
+	background-color: rgba(0,0,200,0.5);
+	color: #FFFFFF;
+	text-align: center;
+}
+.item>form{
+	display: inline-block;
+}
+.item>input{
+	font-size: 16px;
+	font-family: "宋体";
+	width: 50%;
+	outline: none;
+}
+.item>input:hover{
+	background-color: #dbffbe;
+}
+.btn{
+	margin-top: 10px;
+	outline: none;
+}
+
+/* console */
+.console-tips{
+	width:100%; 
+	background-color: #00007f;
+	padding: 10px;
+	color: white;
+	font-family: "微软雅黑";
+	margin-top: 0;
+}
+.graph-wrap{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 250px;
+}
+#pieGraph{
+	width: 50%;
+	height: 100%;
+}
+#barGraph{
+	width: 50%;
+	height: 100%;
+}
+
+
+/* console底部 */
+.bottom-wrap{
+	width: 100%;
+	height: 295px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.tip-card{
+	width: 95%;
+	height: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.func-item{
+	width: 30%;
+	height: 70%;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+.func-item>span{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+}
+.func-item>ul>li:hover{
+	background-color: #10A200;
+	cursor: pointer;
+}
+
+.statistics{
+	background-color: rgba(0,0,200,0.6);
+}
+.detail-tips-statistics{
+	width: 100%;
+	text-align: center;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+/* 我的资料 */
+.mydataPanel{
+	display:flex; 
+	flex-direction:column; 
+	background-color: rgba(0,0,0,0);
+	align-items: center;
+}
+.data-detail-wrap{
+	width: 100%;
+	height: 100px;
+	min-height: 200px;
+	display: flex;
+	flex-direction: row;
+}
+/* 提示用的遮罩层 */
+.data-detail-wrap-tips{
+	width: 300px;
+	height: 270px;
+	min-height: 200px;
+	display: flex;
+	flex-direction: row;
+}
+
+/* 遮罩层 */
+.mydata-item{
+	margin-left: 10px;
+}
+.mydata-item-tips{
+	margin-left: 10px;
+	width: 100%;
+}
+
+/* 用户数据部分 */
+.operatBtn-wrap{
+	display: inline;
+}
+.deleButton{
+	outline: none;
+}

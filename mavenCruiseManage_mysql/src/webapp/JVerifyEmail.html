@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>邮箱验证</title>
+		<link rel="stylesheet" type="text/css" href="./css/JRegister.css"/>
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./js/JVerifyEmail.js"></script>
+	</head>
+	<body>
+		<div id="top">
+			<a href="login.html"></a>
+			<div id="top1">
+				<a id="login" href="javascript:window.history.back(2)">登录</a>
+				<a>|</a>
+				<a id="a1">联系我们</a>
+			</div>
+		</div>
+		
+		<!-- 验证 -->
+		<div id="verification" style="display: block;">
+			<div class="center1-3">
+				<span class="span3 span1"></span>
+				<span class="span4 span2"></span>
+				<font class="font1">填写</font>
+			</div>
+			<div class="center1-3">
+				<span class="span3 span1"></span>
+				<span class="span4 span2"></span>
+				<font class="font1">验证</font>
+			</div>
+			<div class="center1-4">
+				<span class="span3 finish"></span>
+				<span class="span4 finish" id="www"></span>
+				<font class="font1">注册成功</font>
+			</div>
+			<div id="center3">
+				<span>邮箱验证</span>
+				<a>验证成功才能完成绑定</a>
+			</div>
+			<div id="towCenter">
+				<div id="towCenter1">
+					<div id="towCenter1-1">
+						<span>验证码已发送至<a id="phonenum"></a>,<br/>请在24小时内完成验证</span>
+					</div>
+					<input id="code" type="text" placeholder=" 验证码" />
+					<span id="next_step1">注册遇到问题？</span><br />
+					<input id="btn2" type="button" value="完成验证" onclick="finishReg()" />
+				</div>
+				<div id="towCenter2">
+					<p id="towCenter2_p">没有收到验证码？您可以：</p>
+					<input style="margin-left: 30px; cursor: pointer;" onclick="settime(this)" type="button" value="获取验证码" />
+					<p id="or">或</p>
+					<a id="a8">修改手机号</a>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div id="button">
+			<span>
+				<a class="bottom-tip">使用说明</a>
+				<a class="bottom-tip">关于我们</a>
+				<a class="bottom-tip">联系我们</a>
+				<a class="bottom-tip">修改意见</a>
+			</span>
+			<p>Copyright&copy;1999-2022,ctrip.com. all rights reserved.</p>
+		</div>
+	</body>
+</html>
+<style>
+	.font1{
+		color: #acd252!important;
+	}
+	.span1,.span2{
+		background-color: #acd252;
+	}
+</style>

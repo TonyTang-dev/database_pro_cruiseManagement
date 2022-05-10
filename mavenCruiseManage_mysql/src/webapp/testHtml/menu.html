@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伸缩菜单</title>
+	</head>
+	<body>
+		<div id="navigation">
+			<ul id="listUL">
+				<li>
+					<a href="#" onclick="unfold()">个人中心</a>
+					<ul>
+						<li>
+							<a href="#">个人资料</a>
+						</li>
+						<li>
+							<a href="#">与我相关</a>
+						</li>
+						<li>
+							<a href="#">好友动态</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">我的主页</a>
+					<ul>
+						<li> <a href="#">日志</a> </li>
+						<li> <a href="#">相册</a> </li>
+						<li> <a href="#">状态</a> </li>
+					</ul>
+				</li>
+				<li> <a href="#">留言板</a> </li>
+				<li>
+					<a href="#">应用中心</a>
+					<ul>
+						<li> <a href="#">游戏</a> </li>
+						<li> <a href="#">音乐</a> </li>
+						<li> <a href="#">其他</a> </li>
+					</ul>
+				</li>
+				<li> <a href="#">更多</a> </li>
+			</ul>
+		</div>
+	</body>
+</html>
+<style>
+	body{
+		background-color: #eed0e0;
+	}
+	#navigation{
+		width: 200px;
+		font-family: Arial;
+	}
+	#navigation >ul >li{
+		border-bottom: 1px solid #AD9F9F;
+	}
+	#navigation >ul >li >a{
+		display: block;
+		padding: 5px 5px 5px 0.5m;
+		text-decoration: none;
+		border-left: 12px solid #711111;
+	}
+	#navigation >ul >li >a:link, #navigation >ul >li>a:visited{
+		background-color: #c11136;
+		color: #FFFFFF;
+	}
+	#navigation >ul >li >a:hover{
+		background-color: #880020;
+		color: #ff0000;
+	}
+	li{
+		list-style-type: none;
+	}
+	h1{
+		color: red;
+		background-color: #49ff01;
+		text-align: center;
+		padding: 20px;
+	}
+	img{
+		float: left;
+		border: 2px #f00 solid;
+		margin: 5px;
+	}
+	
+	#navigation ul li ul{
+		margin: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+	#navigation ul li ul li{
+		border-top: 1px solid #ed9f9f;
+	}
+	#navigation ul li ul li a{
+		display: block;
+		padding: 3px 3px 3px 0.5em;
+		text-decoration: none;
+		border-left: 28px solid #a71f1f;
+		border-right: 1px solid #711515;
+	}
+	#navigation ul li ul li a:link, #navigation ul li ul li a:visited{
+		background-color: #e85070;
+		color: #FFFFFF;
+	}
+	#navigation ul li ul li a:hover{
+		background-color: #c2425d;
+		color: #ffff00;
+	}
+	#navigation ul li ul.myHide{
+		display: none;
+	}
+	#navigation ul li ul.myShow{
+		display: block;
+	}
+</style>
+<script type="text/javascript">
+	function change(A){
+		var SecondDiv=A.parentNode.getElementsByTagName("ul")[0];
+		if(SecondDiv.className=="myHide"){
+			SecondDiv.className="myShow";
+		}
+		else{
+			SecondDiv.className="myHide";
+		}
+	}
+	window.onload=function(){
+		var Ul=document.getElementById("listUL");
+		var aLi=Ul.childNodes;
+		var A;
+		A=aLi[1].firstChild;
+		A.onclick=change(A);
+		// for(var i=0;i<aLi.length;i++){
+		// 	if(aLi[i].tagName=="LI" && aLi[i].getElementsByTagName("ul").length){
+		// 		A=aLi[i].firstChild;
+		// 		A.onclick=change(A);
+		// 	}
+		// }
+	}
+	function unfold(){
+		var Ul=document.getElementById("listUL");
+		var aLi=Ul.childNodes;
+		var A;
+		A=aLi[1].firstChild;
+		A.onclick=change(A);
+	}
+</script>

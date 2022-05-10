@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册</title>
+	</head>
+	<body>
+		<table width="650" height="34" border="0" align="center" cellpadding="0" cellspacing="0" background="img/loginbg3.png" bgcolor="#B3caee">
+			<tr class="font-white" width="100%">
+				<td width="100%" height="22" align="center">
+					<span class="style1">======&nbsp;用户注册信息&nbsp;======</span>
+				</td>
+				<tr>
+					<table>
+						<td width="436" valign="top">
+							<br><br>
+							<table width="90%" border="0" align="center" cellpadding="-2" cellspacing="-2">
+								<tr>
+									<td>
+										<form name="form1">
+											<table width="100%" border="0" align="center" cellspacing="-1" cellpadding="-2">
+												<tr>
+													<td width="30%" height="30" align="center">用户名：</td>
+													<td width="70%">
+														<input name="UserName" type="text" id="UserName4" maxlength="20" onfocus="txtfocus()" onblur="txtblur()"/>
+														*
+													</td>
+												</tr>
+												<tr>
+													<td height="28" width="30%" align="center">真实姓名：</td>
+													<td height="28">
+														<input name="TrueName" type="text" id="TrueName4" maxlength="10" onkeydown="Clavier(1)" onfocus="txtfocus()" onblur="txtblur()"/>
+														*
+													</td>
+												</tr>
+												<tr>
+													<td height="28" align="center">年&nbsp;&nbsp;龄：</td>
+													<td>
+														<input name="Age" type="text" id="age" onkeydown="Clavier(0)" onfocus="txtfocus()" onblur="txtblur()" />
+													</td>
+												</tr>
+												<tr>
+													<td height="28" align="center">证件号码：</td>
+													<td class="word_grey">
+														<input name="pcard" type="text" id="Tel" onkeydown="Clavier(0)" onfocus="txtfocus()" onblur="txtblur()" />
+													</td>
+												</tr>
+												<tr>
+													<td height="28" align="center">联系电话：</td>
+													<td>
+														<input name="tel" type="text" id="Tel" onfocus="txtfocus()" onblur="txtblur()" />
+													</td>
+												</tr>
+												<tr>
+													<td height="28" align="center" style="padding-left: 10px;">E-mail：</td>
+													<td class="word_grey">
+														<input name="Email" type="text" id="PWD224" size="35" onfocus="txtfocus()" onblur="txtblur()" />
+													</td>
+												</tr>
+												<tr>
+													<td height="28" align="center">个人主页：</td>
+													<td class="word_grey">
+														<input name="homepage" type="text" id="homepage" size="35" onfocus="txtfocus()" onblur="txtblur()" />
+													</td>
+												</tr>
+												<tr>
+													<td height="34">&nbsp;</td>
+													<td class="word_grey">
+														<input name="Button" type="button" class="btn_grey" value="确定保存" />
+														<input name="Submit2" type="reset" class="btn_grey" value="重新填写" />
+													</td>
+												</tr>
+											</table>
+										</form>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</table>
+				</tr>
+			</tr>
+		</table>
+	</body>
+</html>
+<style>
+
+</style>
+<script type="text/javascript">
+	var T=true;
+	function Clavier(n){
+		var k=window.event.keyCode;
+		if(n==1){
+			if(k>=65 && k<=90){
+				T=true;
+			}
+			else{
+				T=false;
+			}
+		}
+		else if(n==0){
+			if((k>=48 && k<=57) || (k>=96 && k<=105)){
+				T=true;
+				if(k&&window.event.shiftKey){
+					T=false;
+				}
+			}
+			else{
+				T=false;
+			}
+		}
+		if((k==37)||(k==39)||(k==8)||(k==46)){
+			T=true;
+		}
+		if(T==false){
+			return window.event.returnValue=true;
+		}
+	}
+	
+	function txtfocus(event){
+		var e=window.event;
+		var obj=e.srcElement;
+		obj.style.background='#daf0de';
+	}
+	function txtblur(event){
+		var e=window.event;
+		var obj=e.srcElement;
+		obj.style.background="#ffffff";
+	}
+</script>

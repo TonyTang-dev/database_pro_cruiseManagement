@@ -1,0 +1,119 @@
+/* CSS Document */
+* {
+	font-size: 9pt;	/*设置字体大小*/
+	border: 0;			/*设置边框线条宽度为0*/
+	margin: 0;			/*设置元素边距间隔宽度为0*/
+	padding: 0;			/*设置元素内部填度为0*/
+	font-family: "微软雅黑";	/*设置字体样式*/
+}
+
+body {
+	/*设置背景色调为 蓝色宝石，如果此处不设置会出现背景图片四周留白显得有点不协调*/
+	background-color: #1c77ac;
+	/*设置背景图片*/
+	background-image: url("../images/login/light.png");
+	/*背景图片不平铺重复出现*/
+	background-repeat: no-repeat;
+	/*背景图片位置为水平居中，垂直顶格*/
+	background-position: center top;
+}
+
+.contain {
+	/*设置背景图片，在布局上不重复平铺呈现且需要居中*/
+	background-image: url("../images/login/loginbg3.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+	/*设置容器的宽度和高度，宽度和高度随浏览器大小自然扩展*/
+	width: 100%;
+	height: 700px;
+	/*隐藏左右滚动条*/
+	overflow: hidden;
+}
+
+.logintop {
+	background-color: #1c77ac;
+	background-position: center top;
+	width: 100%;
+	height: 40px;
+}
+
+.loginbody {
+	width: 100%;
+	height: 700px;
+}
+
+.logindiv {
+	background-image: url("../images/login/logininfo3.png");
+	background-repeat: no-repeat;
+	margin-top: 8%;
+	margin-left: 28%;
+	width: 692px;
+	height: 372px;
+}
+
+.loginform {
+	/*离logindiv的顶部位置百分比间隔*/
+	margin-top: 10%;
+	/*离logindiv的左边位置百分比间隔*/
+	margin-left: 35%;
+	/*填充logindiv的顶空间*/
+	padding-top: 70px;
+	height: 250px;
+	width: 400px;
+}
+
+/*告诉浏览器在loginform类样式下的ul标签 采用如下样式*/
+.loginform ul {
+	margin: 0;
+	padding: 0;
+	list-style: none; /*去除制表符的圆点*/
+}
+
+/*告诉浏览器在loginform类样式下的ul标签下的li标签 采用如下样式*/
+.loginform ul li {
+	margin: 0;
+	list-style: none;	/*去除制表符的圆点*/
+	padding-bottom: 0;
+	padding-left: 20px;
+	padding-right: 0;
+	padding-top: 25px;
+}
+
+.loginuser {
+	width: 299px;
+	height: 48px;
+	background: url("../images/login/loginuser.png") no-repeat;
+	border: none;
+	padding-left: 44px;
+	font-size: 14px;
+	color: #90a2bc;
+}
+
+.loginpwd {
+	width: 299px;
+	height: 48px;
+	background: url("../images/login/loginpassword.png") no-repeat;
+	border: none;
+	padding-left: 44px;
+	font-size: 14px;
+	color: #90a2bc;
+}
+
+.loginbtn {
+	width: 111px;
+	height: 35px;
+	background: url("../images/login/buttonbg.png") repeat-x;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	line-height: 35px;
+}
+
+.loginbottom {
+	height: 50px;
+	width: 100%;
+	position: relative; /*采用相对位置定位方式。在打开浏览器开发者工具时，用绝对位置会覆盖表单输入框，无法操作*/
+	bottom: 200px; /*相对方式位置定位div离底部距离为200px*/
+	text-align: center;	/*文本居中*/
+}
