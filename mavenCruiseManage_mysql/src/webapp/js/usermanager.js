@@ -776,7 +776,7 @@ function Toast(msg){
 	else{
 		m.innerHTML = msg; 
 	}
-	m.style.cssText="z-index: 99; font-size: .32rem;color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;    top: 50%;left: 50%;width: 130px;text-align: center;";
+	m.style.cssText="z-index: 99; font-size: 18px;font-weight:bold;font-family:'宋体';color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;    top: 50%;left: 50%;width: 200px;text-align: center;";
 	document.body.appendChild(m);  
 	setTimeout(function() {  
 		var d = 0.5;
