@@ -192,11 +192,17 @@ body::-webkit-scrollbar-track {
 
 
 /* 我的资料 */
-.mydataPanel{
+.rideManagePanel{
 	display:flex; 
-	flex-direction:column; 
+	flex-direction:column;
+	width: 100%;
+	height: 200px;
 	background-color: rgba(0,0,0,0);
 	align-items: center;
+}
+.statisticsRide{
+	width: 20%;
+	background-color: rgba(0,0,200,0.6);
 }
 .data-detail-wrap{
 	width: 100%;

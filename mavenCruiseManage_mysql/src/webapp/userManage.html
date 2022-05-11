@@ -121,11 +121,36 @@
 				</div>
 			</div>
 			<div id="myData" style="display: none; flex: 1;">
-				<div class="panel panel-default mydataPanel">
-					<img src="img/fruit.png" style="box-shadow: 0px 0px 3px 3px #00ff00; width: 128px; height: 128px; border-radius: 50%; margin-top: 50px;" />
-					<div class="nick-wrap" style="width: 100%;display: flex;flex-direction: column;align-items: center;">
-						<span class="nick" style="font-weight: bold; margin-top: 10px;">昵称：测试一号</span>
-						<span class="signature" style="font-size: 12px;margin-top: 5px;">签名：每个人的一生都是一次远行</span>
+				<div class="panel panel-default rideManagePanel">
+					<div class="tip-card">
+						<div class="func-item statisticsRide">
+							<span>拥有游轮</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>3艘</span>
+							</div>
+						</div>
+						<div class="func-item statisticsRide">
+							<span>公司收支</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>收入:20万 支出:10万</span>
+							</div>
+						</div>
+						<div class="func-item statisticsRide">
+							<span>航程统计</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>重庆->贵阳</span>
+							</div>
+						</div>
+						<div class="func-item statisticsRide">
+							<span>航程统计</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>重庆->贵阳</span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="data-detail-wrap">
@@ -379,7 +404,7 @@
 							<span class="glyphicon glyphicon-th-large"></span> 主控制台
 						</li>
 						<li class="list-group-item" id="data" onclick="changePage(1)">
-							<span class="glyphicon glyphicon-user"></span> 我的资料
+							<span class="glyphicon glyphicon-user"></span> 航程列表
 						</li>
 						<li class="list-group-item" id="add" onclick="changePage(3)">
 							<span class="glyphicon glyphicon-plus-sign"></span> 添加用户
@@ -397,7 +422,7 @@
 							<span class="glyphicon glyphicon-list"></span> 用户列表
 						</li>
 						<li class="list-group-item" id="setting" onclick="changePage(8)">
-							<span class="glyphicon glyphicon-wrench"></span> 薪资列表
+							<span class="glyphicon glyphicon-wrench"></span> 备用列表
 						</li>
 <!--						<li class="list-group-item" id="setting" onclick="changePage(8)">-->
 <!--							<span class="glyphicon glyphicon-wrench"></span> 设置-->
