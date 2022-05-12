@@ -238,158 +238,22 @@
 			</div>
 			<div id="myAdd" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					<!-- 添加页面 -->
-					<div class="data-detail-wrap-tips">
-						<div class="func-item mydata-item-tips">
-							<span>操作说明</span>
-							<ul>
-								<li>先在右侧的输入框中输入用户信息</li>
-								<li>确认输入无误之后点击添加按钮</li>
-								<li>如果反馈添加成功的话，代表用户信息添加成功</li>
-								<li>此时您可到用户信息列表处查看添加的用户信息</li>
-							</ul>
-						</div>
-					</div>
-					<div style="display: flex; align-items: center; justify-content: center; flex:1; height: 300px;">
-						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
-							<div class="item" style="width: 700px; overflow-y: auto;">
-								<span>添加用户</span>
-								<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要填写所有信息之后点击添加即可完成添加信息</div>
-								<form id="form-add" style="text-align: center;">
-									<input id="addUserID" name="userID" type="text" placeholder="用户ID" />
-									<input id="addUserName" name="userName" type="text" placeholder="用户名" />
-									<input id="addUserPassword" name="password" type="text" placeholder="密码" />
-									<input id="addUserRealName" name="realName" type="text" placeholder="实名" />
-									<input id="addUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
-									<input id="addUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
-									<input id="addUserSex" name="sex" type="text" placeholder="性别" />
-									<input id="addUserDegree" name="degree" type="text" placeholder="学历" />
-									<input id="addUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
-									<input id="addUserUserSN" name="userSN" type="text" placeholder="用户编号" />
-									<input id="addUserTelephone" name="telephone" type="text" placeholder="电话" />
-									<input id="addUserMobile" name="mobile" type="text" placeholder="手机" />
-									<input id="addUserEmail" name="Email" type="text" placeholder="邮箱" />
-									<input id="addUserInDate" name="InDate" type="text" placeholder="入职日期" />
-									<input id="addUserIntro" name="Intro" type="text" placeholder="简介" />
-									<input id="addUserRole" name="Role" type="text" placeholder="角色" />
-								</form>
-								<button type="button" name="submit" class="btn btn-success" onclick="addUser()">添加</button>
-
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div id="myQuery" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					<!-- 查找页面 -->
-					<div class="data-detail-wrap-tips">
-						<div class="func-item mydata-item-tips">
-							<span>操作说明</span>
-							<ul>
-								<li>先在右侧的输入框中输入用户名</li>
-								<li>确认输入无误之后点击查询按钮</li>
-								<li>如果反馈添加成功的话，会在面板显示查询的信息数和信息详情</li>
-								<li>当然您也可以直接到用户列表处直接查询</li>
-							</ul>
-						</div>
-					</div>
-					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
-						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
-							<div class="item" id="chat-panel" style="width: 400px; overflow-y: auto;">
-								<span>查找用户</span>
-								<div id="chat-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
-									<form id="form-query" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-										<input id="queryUserName" type="text" placeholder="输入用户名查询" />
-										<button type="button" id="queryByName" class="btn btn-success">查询</button>
-									</form>
-									<div id="queryResult" style="width:100%;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div id="myUpdate" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					<div class="data-detail-wrap-tips">
-						<div class="func-item mydata-item-tips">
-							<span>操作说明</span>
-							<ul>
-								<li>先在右侧的输入框中输入用户名</li>
-								<li>确认输入无误之后点击查询按钮</li>
-								<li>如果反馈用户信息存在则会显示到输入框，默认只匹配查询到的第一个用户信息</li>
-								<li>此时您可编辑用户信息，而后修改完毕点击提交并确认即可修改用户信息</li>
-								<li>当然您可以到用户信息列表选择用户信息，点击“修改用户信息”直接到此页面修改用户信息</li>
-							</ul>
-						</div>
-					</div>
-					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
-						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
-							<div class="item" style="width: 700px; overflow-y: auto;">
-								<span>修改用户</span>
-								<form id="form-updateQuery" style="width:100%; display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-									<input id="queryUpdateUserName" type="text" placeholder="输入用户名以获取用户数据"/>
-									<button type="button" id="queryUpdateByName" class="btn btn-success">获取</button>
-								</form>
-								<div style="width: 100%; height:1px; background-color: #000000;"></div>
-
-								<div style="display:none; text-align: center;" id="updatePanel">
-									<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要确认信息输入完成之后再修改哦</div>
-									<form id="form-update">
-										<input id="updateUserID" name="userID" type="text" placeholder="用户ID" readonly/>
-										<input id="updateUserName" name="userName" type="text" placeholder="用户名" />
-										<input id="updateUserPassword" name="password" type="text" placeholder="密码" />
-										<input id="updateUserRealName" name="realName" type="text" placeholder="实名" />
-										<input id="updateUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
-										<input id="updateUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
-										<input id="updateUserSex" name="sex" type="text" placeholder="性别" />
-										<input id="updateUserDegree" name="degree" type="text" placeholder="学历" />
-										<input id="updateUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
-										<input id="updateUserUserSN" name="userSN" type="text" placeholder="用户编号" />
-										<input id="updateUserTelephone" name="telephone" type="text" placeholder="电话" />
-										<input id="updateUserMobile" name="mobile" type="text" placeholder="手机" />
-										<input id="updateUserEmail" name="Email" type="text" placeholder="邮箱" />
-										<input id="updateUserInDate" name="InDate" type="text" placeholder="入职日期" />
-										<input id="updateUserIntro" name="Intro" type="text" placeholder="简介" />
-										<input id="updateUserRole" name="Role" type="text" placeholder="角色" />
-									</form>
-									<button type="button" class="btn btn-success" onclick="updateUser()">修改</button>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div id="myDelete" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					<!-- delete页面 -->
-					<div class="data-detail-wrap-tips">
-						<div class="func-item mydata-item-tips">
-							<span>操作说明</span>
-							<ul>
-								<li>先在右侧的输入框中输入用户名</li>
-								<li>确认输入无误之后点击删除按钮</li>
-								<li>如果反馈添加成功的话，代表用户信息删除成功</li>
-								<li>注意：此处仅支持单个用户信息的删除，且如果您输入的用户信息不存在则删除无效</li>
-								<li>您也可以直接到用户列表下选择用户信息删除--支持批量删除</li>
-							</ul>
-						</div>
-					</div>
-					<div style="display: flex; align-items: center; justify-content: center; flex: 1; height: 300px;">
-						<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 95%; height: 90%">
-							<div class="item" id="chat-panel2" style="width: 400px; overflow-y: auto;">
-								<span>删除用户</span>
-								<div id="del-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
-									<form id="form-delquery" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-										<input id="deleteUserName" type="text" placeholder="输入用户名查询并删除" />
-										<button type="button" id="del-btn" class="btn btn-success" onclick="delQuery()">删除</button>
-									</form>
-									<div id="deleteResult" style="width:100%;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div id="myUserList" style="display: none; flex: 1;">
@@ -400,6 +264,84 @@
 						<button type="button" class="btn btn-primary deleButton" onclick="changePage(5)">修改选中数据</button>
 						<button type="button" class="btn btn-warning deleButton" onclick="changePage(2)">返回主控制台</button>
 					</div>
+					<div style="inline-block;text-align:center;margin-top:10px;">
+						<div class="item" style="display:inline-block;text-align:center;width: 20%;height: 200px; overflow-y: auto;">
+							<span>添加用户</span>
+							<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要填写所有信息之后点击添加即可完成添加信息</div>
+							<form id="form-add" style="text-align: center;">
+								<input id="addUserID" name="userID" type="text" placeholder="用户ID" />
+								<input id="addUserName" name="userName" type="text" placeholder="用户名" />
+								<input id="addUserPassword" name="password" type="text" placeholder="密码" />
+								<input id="addUserRealName" name="realName" type="text" placeholder="实名" />
+								<input id="addUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
+								<input id="addUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
+								<input id="addUserSex" name="sex" type="text" placeholder="性别" />
+								<input id="addUserDegree" name="degree" type="text" placeholder="学历" />
+								<input id="addUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
+								<input id="addUserUserSN" name="userSN" type="text" placeholder="用户编号" />
+								<input id="addUserTelephone" name="telephone" type="text" placeholder="电话" />
+								<input id="addUserMobile" name="mobile" type="text" placeholder="手机" />
+								<input id="addUserEmail" name="Email" type="text" placeholder="邮箱" />
+								<input id="addUserInDate" name="InDate" type="text" placeholder="入职日期" />
+								<input id="addUserIntro" name="Intro" type="text" placeholder="简介" />
+								<input id="addUserRole" name="Role" type="text" placeholder="角色" />
+							</form>
+							<button type="button" name="submit" class="btn btn-success" onclick="addUser()">添加</button>
+						
+						</div>
+						<div class="item" id="chat-panel2" style="display:inline-block;width: 20%;height:200px; overflow-y: auto;">
+							<span>删除用户</span>
+							<div id="del-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
+								<form id="form-delquery" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+									<input id="deleteUserName" type="text" placeholder="输入用户名查询并删除" />
+									<button type="button" id="del-btn" class="btn btn-success" onclick="delQuery()">删除</button>
+								</form>
+								<div id="deleteResult" style="width:100%;"></div>
+							</div>
+						</div>
+						<div class="item" style="text-align:center;display:inline-block;width: 20%; height: 200px; overflow-y: auto;">
+							<span>修改用户</span>
+							<form id="form-updateQuery" style="width:100%; display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+								<input id="queryUpdateUserName" type="text" placeholder="输入用户名以获取用户数据"/>
+								<button type="button" id="queryUpdateByName" class="btn btn-success">获取</button>
+							</form>
+							<div style="width: 100%; height:1px; background-color: #000000;"></div>
+						
+							<div style="display:inline-block; text-align: center;" id="updatePanel">
+								<div style="font-size: 16px; font-weight: bold;font-family: '宋体'; margin: 10px;text-align: center;">需要确认信息输入完成之后再修改哦</div>
+								<form id="form-update">
+									<input id="updateUserID" name="userID" type="text" placeholder="用户ID" readonly/>
+									<input id="updateUserName" name="userName" type="text" placeholder="用户名" />
+									<input id="updateUserPassword" name="password" type="text" placeholder="密码" />
+									<input id="updateUserRealName" name="realName" type="text" placeholder="实名" />
+									<input id="updateUserDepartmentID" name="departmentID" type="text" placeholder="部门ID" />
+									<input id="updateUserJobPosition" name="jobPosition" type="text" placeholder="职务" />
+									<input id="updateUserSex" name="sex" type="text" placeholder="性别" />
+									<input id="updateUserDegree" name="degree" type="text" placeholder="学历" />
+									<input id="updateUserBornDate" name="bornDate" type="text" placeholder="出生日期" />
+									<input id="updateUserUserSN" name="userSN" type="text" placeholder="用户编号" />
+									<input id="updateUserTelephone" name="telephone" type="text" placeholder="电话" />
+									<input id="updateUserMobile" name="mobile" type="text" placeholder="手机" />
+									<input id="updateUserEmail" name="Email" type="text" placeholder="邮箱" />
+									<input id="updateUserInDate" name="InDate" type="text" placeholder="入职日期" />
+									<input id="updateUserIntro" name="Intro" type="text" placeholder="简介" />
+									<input id="updateUserRole" name="Role" type="text" placeholder="角色" />
+								</form>
+								<button type="button" class="btn btn-success" onclick="updateUser()">修改</button>
+							</div>
+						</div>
+						<div class="item" id="chat-panel" style="display:inline-block;width: 20%;height:200px; overflow-y: auto;">
+							<span>查找用户</span>
+							<div id="chat-text"  style='background-color:#FFFFFF;width:100%;border:1px solid #000000'>
+								<form id="form-query" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
+									<input id="queryUserName" type="text" placeholder="输入用户名查询" />
+									<button type="button" id="queryByName" class="btn btn-success">查询</button>
+								</form>
+								<div id="queryResult" style="width:100%;"></div>
+							</div>
+						</div>
+					</div>
+					<hr>
 					<table id="usertab"
 						data-show-refresh="true"
 						data-show-toggle="true"
@@ -471,22 +413,22 @@
 							<span class="glyphicon glyphicon-user"></span> 航程列表
 						</li>
 						<li class="list-group-item" id="add" onclick="changePage(3)">
-							<span class="glyphicon glyphicon-plus-sign"></span> 添加用户
+							<span class="glyphicon glyphicon-plus-sign"></span> 游轮管理
 						</li>
 						<li class="list-group-item" id="query" onclick="changePage(4)">
-							<span class="glyphicon glyphicon-search"></span> 查询用户
+							<span class="glyphicon glyphicon-search"></span> 港口查询
 						</li>
 						<li class="list-group-item" id="update" onclick="changePage(5)">
-							<span class="glyphicon glyphicon-retweet"></span> 修改用户
+							<span class="glyphicon glyphicon-retweet"></span> 巡游路线
 						</li>
 						<li class="list-group-item" id="delete" onclick="changePage(6)">
-							<span class="glyphicon glyphicon-exclamation-sign"></span> 删除用户
+							<span class="glyphicon glyphicon-exclamation-sign"></span> 公司收支
 						</li>
 						<li class="list-group-item" id="listUser" onclick="changePage(7)">
-							<span class="glyphicon glyphicon-list"></span> 用户列表
+							<span class="glyphicon glyphicon-list"></span> 管理用户
 						</li>
 						<li class="list-group-item" id="setting" onclick="changePage(8)">
-							<span class="glyphicon glyphicon-wrench"></span> 备用列表
+							<span class="glyphicon glyphicon-wrench"></span> 乘客管理
 						</li>
 <!--						<li class="list-group-item" id="setting" onclick="changePage(8)">-->
 <!--							<span class="glyphicon glyphicon-wrench"></span> 设置-->

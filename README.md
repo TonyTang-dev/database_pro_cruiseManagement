@@ -1,4 +1,4 @@
-﻿---
+---
 title: 数据库数据模型设计与实现-project
 tags: 小书匠, TYF, 数据库小组, 课题项目, markdown
 grammar_cjkRuby: true
@@ -72,9 +72,9 @@ Academy Cruises Company (ACA) has decided that their manual system of booking pa
 
 由于操作手残的问题，导致有些表的数据类型和元组内容出现错误，**后期再更改**
 
-![enter description here](./resultImg/schema.png)
+![enter description here](./images/1652174331828.png)
 
-![enter description here](./resultImg/er.png)
+![enter description here](./images/1652174390000.png)
 
 ## 2.系统逻辑设计
 ### 2.1 系统关系模型
@@ -87,7 +87,7 @@ Academy Cruises Company (ACA) has decided that their manual system of booking pa
 
 ![](./resultImg/console.png)
 
-![](./resultImg/userList.png)
+![](./resultImg/manager.png)
 
 ![](./resultImg/0511purchase.png)
 

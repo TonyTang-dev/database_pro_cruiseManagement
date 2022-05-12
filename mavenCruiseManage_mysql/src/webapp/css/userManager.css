@@ -71,8 +71,9 @@ body::-webkit-scrollbar-track {
 	border-color: #00007f;
 	/* justify-content: center; */
 	align-items: center;
-	display: flex;
-	flex-direction: column;
+	/* display: flex;
+	flex-direction: column; */
+	margin:0 10px;
 }
 .item::-webkit-scrollbar {
   /*滚动条整体样式*/
@@ -82,7 +83,7 @@ body::-webkit-scrollbar-track {
 .item::-webkit-scrollbar-thumb {
     /*滚动条里面小方块*/
     border-radius   : 10px;
-    background-color: skyblue;
+    background-color: orange;
 }
 .item::-webkit-scrollbar-track {
     /*滚动条里面轨道*/
@@ -91,6 +92,7 @@ body::-webkit-scrollbar-track {
     border-radius: 10px;
 }
 .item>span{
+	display: block;
 	font-size: 20px;
 	font-weight: bold;
 	font-family: "宋体";
@@ -115,6 +117,12 @@ body::-webkit-scrollbar-track {
 .btn{
 	margin-top: 10px;
 	outline: none;
+}
+#form-update>input{
+	width:40%;
+}
+#form-add>input{
+	width:40%;
 }
 
 /* console */
@@ -215,11 +223,29 @@ body::-webkit-scrollbar-track {
 	overflow-y: auto;
 	/* display: flex;
 	flex-direction: row; */
-	justify-content: space-between;
+	text-align: center;
+}
+/* 滚动条设计 */
+.data-detail-wrap::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.data-detail-wrap::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: orange;
+}
+.data-detail-wrap::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
 }
 .ride-line-item{
 	width: 20%;
 	margin: 20px;
+	text-align: start;
 	display: inline-block;
 }
 
