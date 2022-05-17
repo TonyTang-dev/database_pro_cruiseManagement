@@ -366,40 +366,28 @@ $(function($){
                         align:'center',
                         valign:"middle"
                     },{
-                        title:"考勤编号",
+                        title:"乘客编号",
                         field:"salaryID",
                         align:"center",
                         valign:"middle"
                     },{
-                        title:"员工编号",
+                        title:"乘客名字",
                         field:"userID",
                         align:"center",
                         valign:"middle"
                     },{
-                        title:"基础薪资",
+                        title:"航程ID",
                         field:"basicSalary",
                         align:"center",
                         valign:"middle"
                     },{
-                        title:"奖金",
+                        title:"船舱ID",
                         field:"bonus",
                         align:"center",
                         valign:"middle"
                     },{
-                        title:"扣除",
+                        title:"支付金额",
                         field:"deduct",
-                        align:"center",
-                        valign:"middle"
-                    }
-                    ,{
-                        title:"上班时长(天)",
-                        field:"grade",
-                        align:"center",
-                        valign:"middle"
-                    }
-                    ,{
-                        title:"最终薪资",
-                        field:"finalSalary",
                         align:"center",
                         valign:"middle"
                     }

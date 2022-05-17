@@ -237,23 +237,86 @@
 				</div>
 			</div>
 			<div id="myAdd" style="display: none; flex: 1;">
-				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					
+				<div class="panel panel-default" style="display:flex; flex-direction:column;  align-items: center; background-image: url(img/loginbg3.png);">
+					<div style="width: 100%;">
+						<table id="cruiseTab"
+							   data-show-refresh="true"
+							   data-show-toggle="true"
+							   data-show-columns="true"
+							   data-id-field="cruiseID"
+							   data-search="true"
+							   data-search-align="left"
+							   style="background-color: #FFFFFF;">
+						</table>
+					</div>
 				</div>
 			</div>
 			<div id="myQuery" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					
+					<div style="width: 100%;">
+						<table id="portTab"
+							   data-show-refresh="true"
+							   data-show-toggle="true"
+							   data-show-columns="true"
+							   data-id-field="portID"
+							   data-search="true"
+							   data-search-align="left"
+							   style="background-color: #FFFFFF;">
+						</table>
+					</div>
 				</div>
 			</div>
 			<div id="myUpdate" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					
+					<div style="width: 100%;">
+						<table id="strollTab"
+							   data-show-refresh="true"
+							   data-show-toggle="true"
+							   data-show-columns="true"
+							   data-id-field="strollID"
+							   data-search="true"
+							   data-search-align="left"
+							   style="background-color: #FFFFFF;">
+						</table>
+					</div>
 				</div>
 			</div>
 			<div id="myDelete" style="display: none; flex: 1;">
-				<div class="panel panel-default" style="display:flex; flex-direction:row;  align-items: center; background-image: url(img/loginbg3.png);">
-					
+				<div class="panel panel-default" style="display:flex; flex-direction:column;  align-items: center; background-image: url(img/loginbg3.png);">
+					<div class="tip-card" style="height: 200px;">
+						<div class="func-item statistics">
+							<span>当前总收入</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>20000元</span>
+							</div>
+						</div>
+						<div class="func-item statistics">
+							<span>当前用户退款</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>2000元</span>
+							</div>
+						</div>
+						<div class="func-item statistics">
+							<span>公司净收入</span>
+							<hr>
+							<div class="detail-tips-statistics">
+								<span>18000元</span>
+							</div>
+						</div>
+					</div>
+					<div style="width: 100%;">
+						<table id="passengerPayTab"
+							   data-show-refresh="true"
+							   data-show-toggle="true"
+							   data-show-columns="true"
+							   data-id-field="payID"
+							   data-search="true"
+							   data-search-align="left"
+							   style="background-color: #FFFFFF;">
+						</table>
+					</div>
 				</div>
 			</div>
 			<div id="myUserList" style="display: none; flex: 1;">
@@ -355,10 +418,10 @@
 			</div>
 			<div id="mySetting" style="display: none; flex: 1;">
 				<div class="panel panel-default" style="display:flex; flex-direction:column; background-image: url(img/loginbg3.png);">
-					<div class="operatBtn-wrap">
+					<!-- <div class="operatBtn-wrap">
 						<input id="batchAssessment" style="width:80%;outline:none;" name="assessment" type="text" placeholder="录入所有用户打卡天数，逗号分隔" />
 						<button id="commitAssessment" type="button" class="btn btn-warning deleButton">提交</button>
-					</div>
+					</div> -->
 					<table id="assessmentTab"
 						   data-show-refresh="true"
 						   data-show-toggle="true"
@@ -370,31 +433,6 @@
 					</table>
 				</div>
 			</div>
-<!--			<div id="mySetting" style="display: none; flex: 1;">-->
-<!--				<div class="panel panel-default" style="display:flex; flex-direction:column; background-image: url(img/loginbg3.png);">-->
-<!--					<div class="panel panel-default mydataPanel">-->
-<!--						<img src="img/fruit.png" style="box-shadow: 0px 0px 3px 3px #00ff00; width: 128px; height: 128px; border-radius: 50%; margin-top: 50px;" />-->
-<!--						<div class="nick-wrap" style="width: 100%;display: flex;flex-direction: column;align-items: center;">-->
-<!--							<span class="nick" style="font-weight: bold; margin-top: 10px;">昵称：测试一号</span>-->
-<!--							<span class="signature" style="font-size: 12px;margin-top: 5px;">签名：每个人的一生都是一次远行</span>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--					<div class="data-detail-wrap">-->
-<!--						<div class="func-item mydata-item">-->
-<!--							<span>设置预览</span>-->
-<!--							<ul>-->
-<!--								<li>功能待开发</li>-->
-<!--							</ul>-->
-<!--						</div>-->
-<!--						<div class="func-item mydata-item">-->
-<!--							<span>系统版权</span>-->
-<!--							<ul>-->
-<!--								<li>starnet</li>-->
-<!--							</ul>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
 <!--			右操作栏-->
 			<div class="left-panel">
 				<img id="head-photo" src="img/header.jpg" style="box-shadow: 0px 0px 3px 3px #ffffff; width: 64px; height: 64px; border-radius: 50%; margin-top: 50px;" />
@@ -447,3 +485,4 @@
 <script src="./frame/bootstrap/js/bootstrap-table-locale-all.min.js"></script>
 <script src="js/echarts.min.js"></script>
 <script src="js/usermanager.js"></script>
+<script src="js/managerTab.js"></script>
