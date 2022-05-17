@@ -57,16 +57,16 @@ Academy Cruises Company (ACA) has decided that their manual system of booking pa
 1. 暂时没有实现有的乘客更喜爱新船；
 2. 暂时没有实现乘客是否共享船舱从而调整不同的价格的问题；
 
-| 表名       | 属性                                                                                         | 备注                                   |
-| ---------- | -------------------------------------------------------------------------------------------- | -------------------------------------- |
-| 巡游表     | strollID,rideLength                                                                          | 标识每次巡游的基本信息                 |
-| 港口表     | portID,portName                                                                              | 可停靠的港口                           |
-| 客舱表     | cabinID,cabinName,price                                                                      |                                        |
-| 船只表     | cruiseID,cruiseName,isNewer                                                                  |                                        |
+| 表名       | 属性                                                         | 备注                                   |
+| ---------- | ------------------------------------------------------------ | -------------------------------------- |
+| 巡游表     | strollID,rideLength                                          | 标识每次巡游的基本信息                 |
+| 港口表     | portID,portName                                              | 可停靠的港口                           |
+| 客舱表     | cabinID,cabinName,price                                      |                                        |
+| 船只表     | cruiseID,cruiseName,isNewer                                  |                                        |
 | 航程表     | rideID,strollID,rideDate,cruiseID,cruiseSeats,price,departureID,destinationID,dockablePortID | 航程选定的船只及客舱价格等             |
-| 乘客支付表 | passengerID,passengerName,rideID,cabinID,payment                                             | 用于管理公司收到的乘客支付，一人一条目 |
-| 用户表     | userID,userName,sex,age,telephone,Role                                                       | 用于存储注册系统的用户                 |
-| 公司收支表 | IOID,income,refund                                                                           | 用于存储公司总收入和退款金额           |
+| 乘客支付表 | passengerID,passengerName,rideID,cabinID,payment             | 用于管理公司收到的乘客支付，一人一条目 |
+| 用户表     | userID,userName,password,sex,age,telephone,Role              | 用于存储注册系统的用户                 |
+| 公司收支表 | IOID,income,refund                                           | 用于存储公司总收入和退款金额           |
 ### 1.1 实体及属性
 ### 1.2 系统E-R图
 

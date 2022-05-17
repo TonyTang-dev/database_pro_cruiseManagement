@@ -2,9 +2,7 @@ package com.dbLab.service;
 
 import java.util.List;
 
-import com.dbLab.dao.SysUserDao;
-import com.dbLab.dao.SysUser;
-import com.dbLab.dao.SysAssessment;
+import com.dbLab.dao.*;
 
 public class SysUserServiceImpl implements ISysUserService {
 	
@@ -62,4 +60,12 @@ public class SysUserServiceImpl implements ISysUserService {
 		return sysUserDao.findByUserName(userName);
 	}
 
+	@Override
+	public List<cruiseEntity> getCruiseList(){
+		return sysUserDao.getCruiseList();
+	}
+
+	public List<portEntity> getPortList(){
+		return sysUserDao.getPortList();
+	}
 }

@@ -5,7 +5,7 @@ public class SysUser {
 	private String userName;
 
 	private String password;
-	private int sex;
+	private String sex;
 
 	public String getPassword() {
 		return password;
@@ -24,7 +24,7 @@ public class SysUser {
 	}
 
 	public void setSex(int sex) {
-		this.sex = sex;
+		this.sex = sex==1?"男":"女";
 	}
 
 	public void setAge(int age) {
@@ -36,7 +36,7 @@ public class SysUser {
 	}
 
 	public void setRole(int role) {
-		this.role = role;
+		this.role = role==1?"管理员":"用户";
 	}
 
 	public int getUserID() {
@@ -47,7 +47,7 @@ public class SysUser {
 		return userName;
 	}
 
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	}
 
@@ -59,11 +59,11 @@ public class SysUser {
 		return telephone;
 	}
 
-	public int getRole() {
+	public String getRole() {
 		return role;
 	}
 
 	private int age;
 	private String telephone;
-	private int role;
+	private String role;
 }

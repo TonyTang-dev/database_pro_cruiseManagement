@@ -187,7 +187,7 @@ $(function($){
 			success:function(data,textStatus){
 				if(JSON.parse(data).length != 0){
 					var content = JSON.parse(data)[0];
-                    var keys = ["id","userName","password","realName","departmentID","jobPosition","sex","degree","bornDate","userSN","telephone","mobilePhone","email","inDate","intro","role"];
+                    var keys = ["userID","userName","password","sex","age","telephone","role"];
 
 					$.each($("#form-update").find("input"),function(index,element){
 					    $(this).val(content[keys[index]]);
@@ -321,7 +321,7 @@ $(function($){
 				}
 				
 				// 权限
-				if(data[index].role == '员工'){
+				if(data[index].role == '用户'){
                     roleCountList[0]++;
 				}
 				else{
@@ -428,14 +428,14 @@ $(function($){
 		//rows选中行的数据对象数组
 		var delIdList = "";
 		for(var i=0;i<rows.length;i++){
-			delIdList += rows[i].id+",";
+			delIdList += rows[i].userID+",";
 		}
 		
 		if(delIdList != ""){
 		 	var result=confirm("确定要删除下列用户吗？");
 		 	if(result==true){
 				// 调用删除操作
-				delUser(delIdList);
+				delUser(delIdList.slice(0,-1));
 		 	}
 		}
 	});
@@ -496,23 +496,12 @@ function addUser(){
         userID:"",
         userName:"",
         password:"",
-        realName:"",
-        departmentID:"",
-        jobPosition:"",
         sex:"",
-        degree:"",
-        bornDate:"",
-        userSN:"",
+        age:"",
         telephone:"",
-        mobile:"",
-        Email:"",
-        InDate:"",
-        Intro:"",
         Role:""
     };
-    var indexField = ["userID","userName","password","realName","departmentID",
-            "jobPosition","sex","degree","bornDate", "userSN","telephone",
-            "mobile","Email","InDate","Intro","Role"];
+    var indexField = ["userID","userName","password","sex","age","telephone","Role"];
 //    通过表单获取所有的数据，存储为json格式
     var addData = $("#form-add").serializeArray();
     for(var i=0;i<addData.length;i++){
@@ -581,36 +570,18 @@ function delQuery(){
 				a=$("<span>查找到共"+JSON.parse(data).length+"项纪录</span><br/>");
 				deleteResultPanel.append(a);
 				for(var i=0;i<JSON.parse(data).length;i++){
-					idList+=JSON.parse(data)[i].id+",";
-					a=$("<span>ID："+curObj[i].id+"</span><br/>");
+					idList+=JSON.parse(data)[i].userID+",";
+					a=$("<span>ID："+curObj[i].userID+"</span><br/>");
 					deleteResultPanel.append(a);
 					a=$("<span>用户名："+curObj[i].userName+"</span><br/>");
 					deleteResultPanel.append(a);
-					a=$("<span>实名："+curObj[i].realName+"</span><br/>");
-					deleteResultPanel.append(a);
 					a=$("<span>密码："+curObj[i].password+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>员工编号："+curObj[i].userSN+"</span><br/>");
 					deleteResultPanel.append(a);
 					a=$("<span>性别："+curObj[i].sex+"</span><br/>");
 					deleteResultPanel.append(a);
-					a=$("<span>学历："+curObj[i].degree+"</span><br/>");
+					a=$("<span>年龄："+curObj[i].age+"</span><br/>");
 					deleteResultPanel.append(a);
 					a=$("<span>电话："+curObj[i].telephone+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>手机："+curObj[i].mobilePhone+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>部门ID："+curObj[i].departmentID+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>职务："+curObj[i].jobPosition+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>出生日期："+curObj[i].bornDate+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>入职时间："+curObj[i].inDate+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>简介："+curObj[i].intro+"</span><br/>");
-					deleteResultPanel.append(a);
-					a=$("<span>邮箱："+curObj[i].email+"</span><br/>");
 					deleteResultPanel.append(a);
 					a=$("<span>角色："+curObj[i].role+"</span><br/>");
 					deleteResultPanel.append(a);
@@ -647,7 +618,7 @@ function delQuery(){
 	删除函数执行绑定
  */
 function delUser(curIdList){
-	if(curIdList==""){
+	if(curIdList=="" || curIdList==undefined){
 		Toast("请先选中需要删除的用户信息哦！");
 		return;
 	}
@@ -693,23 +664,12 @@ function updateUser(){
         userID:"",
         userName:"",
         password:"",
-        realName:"",
-        departmentID:"",
-        jobPosition:"",
         sex:"",
-        degree:"",
-        bornDate:"",
-        userSN:"",
+        age:"",
         telephone:"",
-        mobile:"",
-        Email:"",
-        InDate:"",
-        Intro:"",
         Role:""
     };
-    var indexField = ["userID","userName","password","realName","departmentID",
-            "jobPosition","sex","degree","bornDate", "userSN","telephone",
-            "mobile","Email","InDate","Intro","Role"];
+    var indexField = ["userID","userName","password","sex","age","telephone","Role"];
 
     var updateData = $("#form-update").serializeArray();
     for(var i=0;i<indexField.length;i++){

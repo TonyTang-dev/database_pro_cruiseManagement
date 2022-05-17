@@ -19,6 +19,8 @@
 				<prop key="/queryUserController.do">queryUserController</prop>
 				<prop key="/updateUserController.do">updateUserController</prop>
 				<prop key="/updateAssessmentController.do">updateAssessmentController</prop>
+				<prop key="/getCruiseListController.do">getCruiseListController</prop>
+				<prop key="/getPortListController.do">getPortListController</prop>
 			</props>
 		</property>
 	</bean>
@@ -97,6 +99,18 @@
 	</bean>
 
 	<bean id="updateAssessmentController" class="com.dbLab.controller.updateAssessmentController">
+		<property name="sysUserService">
+			<ref bean="sysUserService"></ref>
+		</property>
+	</bean>
+
+	<bean id="getCruiseListController" class="com.dbLab.controller.getCruiseController">
+		<property name="sysUserService">
+			<ref bean="sysUserService"></ref>
+		</property>
+	</bean>
+
+	<bean id="getPortListController" class="com.dbLab.controller.getPortController">
 		<property name="sysUserService">
 			<ref bean="sysUserService"></ref>
 		</property>

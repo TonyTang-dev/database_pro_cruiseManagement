@@ -31,10 +31,10 @@ public class SysUserDao {
 			pstm.setInt(1,sysUser.getUserID());
 			pstm.setString(2,sysUser.getUserName());
 			pstm.setString(3,sysUser.getPassword());
-			pstm.setInt(4,sysUser.getSex());
+			pstm.setInt(4,sysUser.getSex().equals("男")?1:0);
 			pstm.setInt(5,sysUser.getAge());
 			pstm.setString(6,sysUser.getTelephone());
-			pstm.setInt(7,sysUser.getRole());
+			pstm.setInt(7,sysUser.getRole().equals("管理员")?1:0);
 			
 			//			excuting operation
 			pstm.executeUpdate();
@@ -51,7 +51,7 @@ public class SysUserDao {
 	 */
 	public int updateSysUser(SysUser sysUser) {
 		//		sql statement
-		String sql="update sys_user set userID=?,userName=?,password=?,sex=?,age=?,telephone=?,role=?";
+		String sql="update sys_user set userID=?,userName=?,password=?,sex=?,age=?,telephone=?,role=? where userID=?";
 		
 		//		get href
 		Connection conn=dbUtils.getConn();
@@ -63,10 +63,11 @@ public class SysUserDao {
 			pstm.setInt(1,sysUser.getUserID());
 			pstm.setString(2,sysUser.getUserName());
 			pstm.setString(3,sysUser.getPassword());
-			pstm.setInt(4,sysUser.getSex());
+			pstm.setInt(4,sysUser.getSex().equals("男")?1:0);
 			pstm.setInt(5,sysUser.getAge());
 			pstm.setString(6,sysUser.getTelephone());
-			pstm.setInt(7,sysUser.getRole());
+			pstm.setInt(7,sysUser.getRole().equals("管理员")?1:0);
+			pstm.setInt(8,sysUser.getUserID());
 			
 			//			excuting operation
 			pstm.executeUpdate();
@@ -288,5 +289,71 @@ public class SysUserDao {
 		}
 		
 		return dataList;
+	}
+
+	/*获取游轮列表*/
+	public List<cruiseEntity> getCruiseList(){
+		List<cruiseEntity> dataList = new ArrayList<cruiseEntity>();
+		String sql = "select * from cruise";
+
+		Connection conn=dbUtils.getConn();
+		PreparedStatement pstm=null;
+
+		ResultSet rs=null;
+
+		try {
+			//			query
+			pstm = conn.prepareStatement(sql);
+
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				cruiseEntity cruise = new cruiseEntity();
+                cruise.setCruiseID(rs.getInt("cruiseID"));
+                cruise.setCruiseName(rs.getString("cruiseName"));
+                cruise.setIsNewer(rs.getInt("isNewer"));
+
+				dataList.add(cruise);
+			}
+		}catch(Exception e) {
+			throw new RuntimeException("SysUserDao-findByUserName",e);
+		}finally {
+			//			release db
+			dbUtils.releaseAll(conn, pstm, rs);
+		}
+
+		return dataList;
+	}
+
+	/*获取港口列表*/
+	public List<portEntity> getPortList(){
+		List<portEntity> portList = new ArrayList<portEntity>();
+
+		String sql = "select * from port";
+
+		Connection conn = dbUtils.getConn();
+		PreparedStatement pstm = null;
+
+		ResultSet rs = null;
+
+		try{
+			pstm = conn.prepareStatement(sql);
+
+			rs = pstm.executeQuery();
+
+			while(rs.next()){
+				portEntity port = new portEntity();
+				port.setPortID(rs.getInt("portID"));
+				port.setPortName(rs.getString("portName"));
+
+				portList.add(port);
+			}
+
+		}catch(Exception e){
+			throw new RuntimeException("getPortList throw exception");
+		}finally {
+			dbUtils.releaseAll(conn,pstm,rs);
+		}
+
+		return portList;
 	}
 }

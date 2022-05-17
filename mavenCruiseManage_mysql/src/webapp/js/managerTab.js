@@ -37,7 +37,7 @@ $(function($){
 	
 		// data: dataList,
 	
-		url:"/mavenCruiseManage/getUserAssessmentController.do",
+		url:"/mavenCruiseManage/getCruiseListController.do",
 		method:"GET",
 	
 		/*
@@ -86,7 +86,7 @@ $(function($){
 	
 		// data: dataList,
 	
-		url:"/mavenCruiseManage/getUserAssessmentController.do",
+		url:"/mavenCruiseManage/getPortListController.do",
 		method:"GET",
 	
 		/*
