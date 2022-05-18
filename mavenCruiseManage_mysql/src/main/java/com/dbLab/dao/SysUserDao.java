@@ -356,4 +356,34 @@ public class SysUserDao {
 
 		return portList;
 	}
+
+    /*获取巡游列表*/
+    public List<strollEntity> getStrollList(){
+        List<strollEntity> strollList = new ArrayList<strollEntity>();
+
+        String sql = "select * from stroll";
+
+        Connection conn = dbUtils.getConn();
+        PreparedStatement pstm = null;
+
+        ResultSet rs = null;
+        try{
+            pstm = conn.prepareStatement(sql);
+            rs = pstm.executeQuery();
+
+            while(rs.next()){
+                strollEntity stroll = new strollEntity();
+                stroll.setStrollID(rs.getInt("strollID"));
+                stroll.setStrollLength(rs.getInt("strollLength"));
+
+                strollList.add(stroll);
+            }
+        }catch(Exception e){
+            throw new RuntimeException("throw getStrollList Exception");
+        }finally {
+            dbUtils.releaseAll(conn,pstm,rs);
+        }
+
+        return strollList;
+    }
 }

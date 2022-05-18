@@ -2,10 +2,7 @@ package com.dbLab.service;
 
 import java.util.List;
 
-import com.dbLab.dao.SysAssessment;
-import com.dbLab.dao.SysUser;
-import com.dbLab.dao.cruiseEntity;
-import com.dbLab.dao.portEntity;
+import com.dbLab.dao.*;
 
 public interface ISysUserService {
 	public int addSysUser(SysUser sysUser);
@@ -26,4 +23,6 @@ public interface ISysUserService {
 	public List<cruiseEntity> getCruiseList();
 
 	public List<portEntity> getPortList();
+
+	public List<strollEntity> getStrollList();
 }

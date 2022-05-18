@@ -65,7 +65,13 @@ public class SysUserServiceImpl implements ISysUserService {
 		return sysUserDao.getCruiseList();
 	}
 
+	@Override
 	public List<portEntity> getPortList(){
 		return sysUserDao.getPortList();
+	}
+
+	@Override
+	public List<strollEntity> getStrollList(){
+		return sysUserDao.getStrollList();
 	}
 }

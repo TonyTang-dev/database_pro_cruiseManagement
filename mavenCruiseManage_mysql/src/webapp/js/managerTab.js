@@ -135,7 +135,7 @@ $(function($){
 	
 		// data: dataList,
 	
-		url:"/mavenCruiseManage/getUserAssessmentController.do",
+		url:"/mavenCruiseManage/getStrollListController.do",
 		method:"GET",
 	
 		/*
