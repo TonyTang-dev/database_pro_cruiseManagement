@@ -386,4 +386,66 @@ public class SysUserDao {
 
         return strollList;
     }
+
+	/*获取乘客表*/
+	public List<passengerEntity> getPassengerList(){
+		List<passengerEntity> passengerList = new ArrayList<passengerEntity>();
+		String sql = "select * from passengerPay";
+
+		Connection conn=dbUtils.getConn();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+
+		try{
+			pstm = conn.prepareStatement(sql);
+			rs = pstm.executeQuery();
+
+			while(rs.next()){
+				passengerEntity passenger = new passengerEntity();
+				passenger.setPassengerID(rs.getInt("passengerID"));
+				passenger.setPassengerName(rs.getString("passengerName"));
+				passenger.setRideID(rs.getInt("rideID"));
+				passenger.setUserID(rs.getInt("userID"));
+				passenger.setCabinID(rs.getInt("cabinID"));
+				passenger.setPayment(rs.getInt("payment"));
+
+				passengerList.add(passenger);
+			}
+		}catch(Exception e){
+			throw new RuntimeException("get passengerList exception");
+		}finally {
+			dbUtils.releaseAll(conn,pstm,rs);
+		}
+
+		return passengerList;
+	}
+
+    /*获取公司收支表*/
+    public List<corporationIOEntity> getCorporationList(){
+        List<corporationIOEntity> corporation = new ArrayList<>();
+        String sql = "select * from corporation_io";
+
+        Connection conn = dbUtils.getConn();
+        PreparedStatement pstm = null;
+
+        ResultSet rs = null;
+        try{
+            pstm = conn.prepareStatement(sql);
+            rs = pstm.executeQuery();
+            while(rs.next()){
+                corporationIOEntity corporationIO = new corporationIOEntity();
+                corporationIO.setIoID(rs.getInt("ioID"));
+                corporationIO.setIncome(rs.getInt("income"));
+                corporationIO.setRefund(rs.getInt("refund"));
+
+                corporation.add(corporationIO);
+            }
+        }catch(Exception e){
+            throw new RuntimeException("getCorporationList Eexception");
+        }finally{
+            dbUtils.releaseAll(conn,pstm,rs);
+        }
+
+        return corporation;
+    }
 }

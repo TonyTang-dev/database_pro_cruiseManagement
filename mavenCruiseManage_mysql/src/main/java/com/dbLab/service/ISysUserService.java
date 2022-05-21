@@ -25,4 +25,7 @@ public interface ISysUserService {
 	public List<portEntity> getPortList();
 
 	public List<strollEntity> getStrollList();
+
+	public List<passengerEntity> getPassengerList();
+	public List<corporationIOEntity> getCorporationList();
 }

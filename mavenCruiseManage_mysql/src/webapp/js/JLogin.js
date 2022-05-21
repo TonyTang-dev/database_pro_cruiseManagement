@@ -65,10 +65,10 @@ function clickSubmit(index){
 		Toast("请先完善信息再点击登录哦");
 		return;
 	}
-//	if (myreg.test(userName)==false) {
-//		Toast('手机号格式不正确')
-//		return false;
-//	}
+	if (myreg.test(userName)==false) {
+		Toast('手机号格式不正确')
+		return false;
+	}
 	else {
 		if(index==1&&$("#remPWD").attr("checked")=='checked'){
 			var obj = {"name": $(".account").val(),"pwd": $("#pwd1").val()};

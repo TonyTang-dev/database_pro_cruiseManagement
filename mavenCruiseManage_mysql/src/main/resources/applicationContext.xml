@@ -22,6 +22,8 @@
 				<prop key="/getCruiseListController.do">getCruiseListController</prop>
 				<prop key="/getPortListController.do">getPortListController</prop>
 				<prop key="/getStrollListController.do">getStrollListController</prop>
+				<prop key="/getPassengerListController.do">getPassengerListController</prop>
+				<prop key="/getCorporationListController.do">getCorporationListController</prop>
 			</props>
 		</property>
 	</bean>
@@ -118,6 +120,17 @@
 	</bean>
 
 	<bean id="getStrollListController" class="com.dbLab.controller.getStrollController">
+		<property name="sysUserService">
+			<ref bean="sysUserService"></ref>
+		</property>
+	</bean>
+
+	<bean id="getPassengerListController" class="com.dbLab.controller.getPassengerPayController">
+		<property name="sysUserService">
+			<ref bean="sysUserService"></ref>
+		</property>
+	</bean>
+	<bean id="getCorporationListController" class="com.dbLab.controller.getCorporationIOController">
 		<property name="sysUserService">
 			<ref bean="sysUserService"></ref>
 		</property>

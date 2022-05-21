@@ -74,4 +74,14 @@ public class SysUserServiceImpl implements ISysUserService {
 	public List<strollEntity> getStrollList(){
 		return sysUserDao.getStrollList();
 	}
+
+	@Override
+	public List<passengerEntity> getPassengerList(){
+		return sysUserDao.getPassengerList();
+	}
+
+	@Override
+	public List<corporationIOEntity> getCorporationList(){
+		return sysUserDao.getCorporationList();
+	}
 }
