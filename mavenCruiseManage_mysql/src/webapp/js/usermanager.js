@@ -37,6 +37,32 @@ var roleCountList=[0,0];
 	类似于构造函数，自动执行，基于jquery实现，包括函数绑定和界面初始化
  */
 $(function($){
+        $.ajax({
+			method: "GET",
+			url:'/mavenCruiseManage/getRideListController.do',
+			timeout: 5000,
+			context:this,
+			success:function(data,textStatus){
+			    console.log(data[0]);
+//				if(JSON.parse(data).length != 0){
+//					var content = data[0];//JSON.parse(data)[0];
+//					console.log(content.cruiseID);
+//					console.log(content["price"]);
+//
+//				}
+//				else{
+//					alert("发生错误！");
+//				}
+			},
+			error:function(data){
+				// window.location.href="/mavenCruiseManage/show404.html";
+			},
+			complete:function(){
+
+			}
+		});
+
+
 	// 初始化选中状态，首先选中控制台
 	$("#console").css("background-color","#ff5500");
 	

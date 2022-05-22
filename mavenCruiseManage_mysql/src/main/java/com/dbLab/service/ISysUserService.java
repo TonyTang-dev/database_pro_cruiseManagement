@@ -28,4 +28,6 @@ public interface ISysUserService {
 
 	public List<passengerEntity> getPassengerList();
 	public List<corporationIOEntity> getCorporationList();
+
+	public List<rideEntity> getRideList();
 }

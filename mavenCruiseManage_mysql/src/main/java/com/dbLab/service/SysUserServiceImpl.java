@@ -84,4 +84,9 @@ public class SysUserServiceImpl implements ISysUserService {
 	public List<corporationIOEntity> getCorporationList(){
 		return sysUserDao.getCorporationList();
 	}
+
+	@Override
+	public List<rideEntity> getRideList(){
+		return sysUserDao.getRideList();
+	}
 }

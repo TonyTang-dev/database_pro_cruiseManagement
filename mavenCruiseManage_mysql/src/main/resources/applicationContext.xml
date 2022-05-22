@@ -24,6 +24,7 @@
 				<prop key="/getStrollListController.do">getStrollListController</prop>
 				<prop key="/getPassengerListController.do">getPassengerListController</prop>
 				<prop key="/getCorporationListController.do">getCorporationListController</prop>
+				<prop key="/getRideListController.do">getRideListController</prop>
 			</props>
 		</property>
 	</bean>
@@ -131,6 +132,11 @@
 		</property>
 	</bean>
 	<bean id="getCorporationListController" class="com.dbLab.controller.getCorporationIOController">
+		<property name="sysUserService">
+			<ref bean="sysUserService"></ref>
+		</property>
+	</bean>
+	<bean id="getRideListController" class="com.dbLab.controller.getRideListController">
 		<property name="sysUserService">
 			<ref bean="sysUserService"></ref>
 		</property>

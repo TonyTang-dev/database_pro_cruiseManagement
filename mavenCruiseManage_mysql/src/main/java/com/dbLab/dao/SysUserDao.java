@@ -448,4 +448,39 @@ public class SysUserDao {
 
         return corporation;
     }
+
+	/*航程表*/
+	public List<rideEntity> getRideList(){
+		List<rideEntity> rideList = new ArrayList<>();
+		String sql = "select * from ride";
+
+		Connection conn = dbUtils.getConn();
+		PreparedStatement pstm = null;
+
+		ResultSet rs = null;
+		try{
+			pstm = conn.prepareStatement(sql);
+			rs = pstm.executeQuery();
+			while(rs.next()){
+				rideEntity ride = new rideEntity();
+				ride.setRideID(rs.getInt("rideID"));
+				ride.setStrollID(rs.getInt("strollID"));
+				ride.setRideDate(rs.getString("rideDate"));
+				ride.setCruiseID(rs.getInt("cruiseID"));
+				ride.setCruiseSeats(rs.getInt("cruiseSeats"));
+				ride.setPrice(rs.getString("price"));
+				ride.setDepartureID(rs.getInt("departureID"));
+				ride.setDestinationID(rs.getInt("destinationID"));
+				ride.setDockablePort(rs.getString("dockablePort"));
+
+				rideList.add(ride);
+			}
+		}catch(Exception e){
+			throw new RuntimeException("getRideList Eexception");
+		}finally{
+			dbUtils.releaseAll(conn,pstm,rs);
+		}
+
+		return rideList;
+	}
 }
